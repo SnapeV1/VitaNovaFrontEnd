@@ -1,0 +1,182 @@
+button{
+    border: none;
+    background-color: transparent;
+}
+
+.container {
+    background-color: #ffffff;
+    display: flex;
+    width: 120px; /* Further decreased width */
+    height: 45px; /* Further decreased height */
+    position: relative;
+    border-radius: 2px; /* Further decreased border radius */
+    transition: 0.3s ease-in-out;
+  }
+  
+  .container:hover {
+    transform: scale(0.8); /* Further decreased scale */
+  }
+  
+  .container:hover .left-side {
+    width: 100%;
+  }
+  
+  .left-side {
+    background-color: #5de2a3;
+    width: 45px; /* Further decreased width */
+    height: 45px; /* Further decreased height */
+    border-radius: 2px; /* Further decreased border radius */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  
+  .right-side {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .right-side:hover {
+    background-color: #f9f7f9;
+  }
+  
+  .arrow {
+    width: 10px; /* Further decreased width */
+    height: 10px; /* Further decreased height */
+    margin-right: 5px; /* Further decreased margin */
+  }
+  
+  .new {
+    font-size: 7px; /* Further decreased font size */
+    font-family: "Lexend Deca", sans-serif;
+    margin-left: 5px; /* Further decreased margin */
+  }
+  
+  .card {
+    width: 28px; /* Further decreased width */
+    height: 18px; /* Further decreased height */
+    background-color: #c7ffbc;
+    border-radius: 2px; /* Further decreased border radius */
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 1px -1px rgba(77, 200, 143, 0.72); /* Further adjusted box shadow */
+    -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -moz-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  -webkit-box-shadow: 9px 9px 9px -2px rgba(77, 200, 143, 0.72);
+  }
+  
+  .card-line {
+    width: 24px; /* Further decreased width */
+    height: 4px; /* Further decreased height */
+    background-color: #80ea69;
+    border-radius: 2px;
+    margin-top: 2px; /* Further decreased margin */
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .container {
+      transform: scale(0.4); /* Further decreased scale */
+    }
+  
+    .container:hover {
+      transform: scale(0.45); /* Further decreased scale */
+    }
+  
+    .new {
+      font-size: 8px; /* Further decreased font size */
+    }
+  }
+  .container:hover .card {
+    animation: slide-top 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+  }
+  
+  .container:hover .post {
+    animation: slide-post 1s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+  }
+  
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    50% {
+      -webkit-transform: translateY(-70px) rotate(90deg);
+      transform: translateY(-70px) rotate(90deg);
+    }
+  
+    60% {
+      -webkit-transform: translateY(-70px) rotate(90deg);
+      transform: translateY(-70px) rotate(90deg);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-8px) rotate(90deg);
+      transform: translateY(-8px) rotate(90deg);
+    }
+  }
+  
+  
+  .CheckoutCard {
+    width: 500px;
+    background-color: #f2f2f2;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  
+  .CheckoutCard form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .CheckoutCard label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .CheckoutCard input[type="text"],
+  .CheckoutCard input[type="text"]:focus {
+    border: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .CheckoutCard input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px rgba(0,0,0,0.1);
+  }
+  
+  .ngxStripeCardGroup {
+    margin-bottom: 20px;
+  }
+  
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+
+  
+  

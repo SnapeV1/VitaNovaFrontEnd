@@ -1,0 +1,82 @@
+<body>
+    <div class="container">
+      <div  *ngFor="let periodTracker of periodTrackers">
+
+      <button class="backk" (click)="getCyclePhase(periodTracker.idPeriod)">
+        <a> Get back  </a>
+    </button>
+
+</div>
+      <div class="row">
+            <div class="box">
+
+
+
+<div class="card_exercise">
+    <div class="contentt">
+      <div class="back">
+        <div class="back-content">
+          <strong>Recommended exercises</strong>
+          <h2>Low Intensity</h2>
+        </div>
+      </div>
+      <div class="front">
+        <div class="img">
+          <div class="circle_exercise"></div>
+          <div class="circle_exercise" id="right"></div>
+          <div class="circle_exercise" id="bottom"></div>
+        </div>
+        <div class="front-content">
+          <ul class="exercise-list">
+            <li *ngFor="let exercise of exercises">
+              <div class="title_exercise">
+                <p>{{ exercise.title }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card_exercise">
+    <div class="contentt">
+      <div class="back">
+        <div class="back-content">
+          <strong>Recommended foods</strong>
+        </div>
+      </div>
+      <div class="front">
+        <div class="img">
+          <div class="circle_exercise"></div>
+          <div class="circle_exercise" id="right"></div>
+          <div class="circle_exercise" id="bottom"></div>
+        </div>
+        <div class="front-content">
+          <ul class="exercise-list">
+            <li *ngFor="let food of foods">
+              <div class="title_exercise">
+                <p>Title: {{ food.title }} [
+                Vitamin C: {{ food.vitaminC }}
+                Vitamin B6: {{ food.vitaminB6 }}
+                Vitamin E: {{ food.vitaminE }}
+                Calcium: {{ food.calcium }}  ]</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="recipes" (click)="getRecipes()">Get Recipes</button>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+</body>

@@ -1,0 +1,56 @@
+<!-- user-list.component.html -->
+<div class="user-list">
+
+    <h2 class="list-title">List of Users</h2>
+    <input type="text" placeholder="Search users..." [(ngModel)]="searchQuery" (input)="onSearchQueryChange()" />
+    <label for="role">Select Role:</label>
+    <select [(ngModel)]="selectedRole" (change)="onRoleChange()">
+        <option value="">All Roles</option>
+        <option value="ADMIN">Admin</option>
+        <option value="USER">User</option>
+    </select>
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Birthdate</th>
+                <th>Gender</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Role</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="filteredUsers.length === 0">
+                <td colspan="8">No users found</td>
+            </tr>
+            <ng-container *ngFor="let user of (searchQuery || selectedRole) ? filteredUsers : users">
+                <tr [ngClass]="(user.archive === true) ? 'archived-row' : 'active-row'">
+                    <td contenteditable (blur)="updateUserProperty($event, user, 'username')">{{ user.username }}</td>
+                    <td contenteditable (blur)="updateUserProperty($event, user, 'email')">{{ user.email }}</td>
+                    <input type="date" [(ngModel)]="user.dateOfBirth" (blur)="updateUserProperty($event, user, 'dateOfBirth')" />
+                    <td>
+                        <select [(ngModel)]="user.gender" (blur)="updateUserProperty($event, user, 'gender')">
+                            <option value="MAN">man</option>
+                            <option value="WOMAN">Woman</option>
+                        </select>
+                    </td>
+                    <td contenteditable (blur)="updateUserProperty($event, user, 'firstName')">{{ user.firstName }}</td>
+                    <td contenteditable (blur)="updateUserProperty($event, user, 'lastName')">{{ user.lastName }}</td>
+                    <td>
+                        <select [(ngModel)]="user.role" (blur)="updateUserProperty($event, user, 'role')">
+                            <option value="ADMIN">ADMIN</option>
+                            <option value="USER">USER</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button (click)="deleteUser(user.idUser)" *ngIf="!user.archive">Delete</button>
+                        <button (click)="ActivateUser(user.idUser)" *ngIf="user.archive">Activate</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

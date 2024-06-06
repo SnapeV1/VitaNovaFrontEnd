@@ -1,0 +1,25 @@
+.addDiv {
+    position: fixed;
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: #000000c5;
+    border-radius: 20px;
+    height: 400px;
+    width: 800px;
+    box-shadow:0px 0px 10px  #b4d821;
+    
+}
+input{
+    color: white;
+}
+label{
+    color: white;
+}
+textarea{
+    color: white;
+}
+.form{
+    margin: 30px;
+}

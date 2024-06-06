@@ -1,0 +1,96 @@
+<br><br><br><br><br><br><br><br><br>
+<div class="addDiv">
+    <form [formGroup]="myForm">
+    <table class="form">
+
+        <tr>
+            <td>
+                
+                <div class="input-group input-group-static mb-4 col">
+                    <label>Challenge Name</label>
+                    <input type="text" style="color: white; background-color: #00000067;" class="form-control" formControlName="name" >
+                  </div>
+                  <div *ngIf="name.touched && name.value==''"><h5 style="color:#f44335 ;" >*Name is Obligatory</h5>
+                
+                </div>
+            </td>
+
+            <td>
+                <div class="input-group input-group-static mb-4 col">
+                    <label>Challenge Description</label>
+                    <textarea style="color: white; background-color: #00000067;" class="form-control" rows="1" formControlName="description" ></textarea>
+                  </div>
+                  <div *ngIf="description.touched && description.value=='' "  ><h5 style="color:#f44335 ;" >*Description is Obligatory</h5>
+                
+                </div>
+                  
+
+            </td>
+        </tr>
+        <tr>
+            
+        </tr> <!--goal.pristine || goal.touched -->
+        <tr >
+            <td>
+                <div class="input-group input-group-static mb-4 col  ">
+                    <label for="exampleFormControlSelect1" class="ms-0">Type</label>
+                    <select style="color: white; background-color: #00000067;" class="form-control" id="exampleFormControlSelect1" formControlName="type" >
+                      <option *ngFor="let item of challengeType">{{item}}</option>
+                      
+                      
+                    </select>
+                   
+                  </div>
+            </td>
+            <td>
+                <div class="col">
+                    <h4 style="color:#ffffff ;" >*In water type, compare to will automatically be MORE THAN</h4>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="input-group input-group-static mb-4 col" *ngIf="type.value==='CALORIES'" >
+                    <label for="exampleFormControlSelect1" class="ms-0">Compare</label>
+                    <select style="color: white; background-color: #00000067;" class="form-control" id="exampleFormControlSelect1" formControlName="compare" >
+                      <option *ngFor="let item of challengeCompare">{{item}} </option>
+                      
+                      
+                    </select>
+                   
+                  </div>
+            </td>
+            <td>
+                <div class="input-group input-group-outline my-3 col">
+                    
+                    <input style="color: white;  background-color: #00000067;" type="number" placeholder="Goal" class="form-control" formControlName="goal">
+                  </div>
+                  <div *ngIf="goal.touched && goal.value=='' "  ><h5 style="color:#f44335 ;" >*Goal is Obligatory</h5>
+                 <div *ngIf="goal?.invalid">
+                    <div *ngIf="goal.errors['min(10)']"><h5 style="color:#f44335 ;" >*Goal can't be below 10</h5></div>
+
+                 </div>
+                </div>
+                
+            </td>
+        </tr>
+      
+       
+        <tr>
+            <td>
+                
+                
+                <button type="button" class="btn btn-secondary btn-lg w-100" [disabled]="myForm.invalid" (click)="saveChallenge()">New Challenge</button>
+            </td>
+            <td>
+                
+                
+                <button style="margin-left: 50px; max-width: 200px;" type="button" class="btn btn-secondary btn-lg w-100" routerLink="/vitaNova/community">Cancel</button>
+            </td>
+        </tr>
+
+    </table>
+
+</form>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>

@@ -1,0 +1,528 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+
+.aaa{
+  background-image: url('file:C:/Users/ASUS/Desktop/bbb.jpg');
+  background-size: 100% 100%; /* Enlarge the background image to cover the entire container */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+#container {
+    box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+    background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value to make the background more transparent */
+    text-align: center;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 5em auto;
+    height: auto; /* Ajustez la hauteur du conteneur */
+    width: 90%; /* Ajustez la largeur du conteneur */
+}
+
+/* Product details */
+/* Product details */
+.product-details {
+  position: relative;
+  text-align: left;
+  overflow: hidden;
+  padding: 15px; /* Réduit l'espacement intérieur */
+  height: auto;
+  width: 30%; /* Réduit la largeur des cartes */
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border: 2px solid #ddd; /* Ajoute une bordure autour de chaque carte */
+  border-radius: 8px; /* Arrondit les coins de la bordure */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre */
+}
+
+/* Product Name */
+#container .product-details h1 {
+  font-family: 'Old Standard TT', serif;
+  display: inline-block;
+  position: relative;
+  font-size: 34px;
+  color: #344055;
+  margin: 0;
+}
+
+/* Product image */
+.product-image {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 35%; /* Réduit la largeur des images */
+  float: left;
+  margin-right: 10px; /* Ajoute une marge à droite pour séparer l'image du texte */
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Product description */
+#container .product-details p.information {
+  font-family: 'Farsan', cursive;
+  text-align: left;
+  font-size: 16px; /* Réduit la taille de la police */
+  color: #7d7d7d;
+  margin-top: 10px; /* Ajoute une marge en haut pour séparer la description du nom */
+}
+
+
+
+
+/* Product Name */
+#container .product-details h1 {
+  font-family: 'Old Standard TT', serif;
+  display: inline-block;
+  position: relative;
+  font-size: 34px;
+  color: white;
+  margin: 0;
+}
+#container .product-details h1:before {
+    position: absolute;
+    content: '';
+    right: 0%;
+    top: 0%;
+    transform: translate(25px, -15px);
+    font-family: 'Farsan', cursive;
+    display: inline-block;
+    background: #FFA69E;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+    color: white;
+    margin: 0;
+    animation: chan-sh 6s ease infinite;
+}
+
+#container .product-details .control {
+  left: 5%; /* Ajustez la valeur selon vos préférences */
+}
+
+@keyframes chan-sh {
+    from  { content: 'free shipping'; }
+    to  { content: 'New'; }
+}
+
+/* Product Rating */
+.hint-star {
+    display: inline-block;
+    margin-left: 0.5em;
+    color: gold;
+    width: 50%;
+}
+
+/* The most important information about the product */
+#container .product-details > p {
+    font-family: 'Farsan', cursive;
+    text-align: center;
+    font-size: 20px;
+    color: whitesmoke;
+    position: absolute;
+    left: 5%;
+}
+#container .product-details p.information {
+  font-family: 'Farsan', cursive;
+  text-align: left;
+  font-size: 20px;
+  color: #7d7d7d;
+  margin-top: 10px; /* Ajoutez une marge en haut pour séparer la description du nom */
+}
+
+/* Control */
+.control {
+    position: absolute;
+    bottom: 20%;
+    left: 22.8%;
+}
+
+/* The Button */
+.btn {
+    transform: translateY(30px);
+    transition: 0.3s linear;
+    background: #49C608;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: #eee;
+    padding: 0;
+    margin: 0;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+.btn span {
+    font-family: 'Farsan', cursive;
+    transition: transform 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+/* Shopping cart icon */
+.btn .price, .shopping-cart {
+    background: #333;
+    border: 0;
+    margin: 0;
+}
+
+.btn .price {
+    transform: translateX(-10%);
+    padding-right: 15px;
+}
+
+/* The Icon */
+.btn .shopping-cart {
+    transform: translateX(-100%);
+    position: absolute;
+    background: #333;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+/* Buy */
+.btn .buy {
+    z-index: 3;
+    font-weight: bolder;
+}
+
+.btn:hover .price {
+    transform: translateX(-110%);
+}
+
+.btn:hover .shopping-cart {
+    transform: translateX(0%);
+}
+
+/* Product image */
+.product-image {
+  transition: all 0.3s ease-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Ajustez la hauteur souhaitée pour les images */
+  float: right;
+  width: 50%; /* Ajustez la largeur des images */
+}
+
+
+.product-image img {
+  width: 100%;
+  height: auto;
+}
+
+#container img {
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    background: rgba(27, 26, 26, 0.9);
+    font-family: 'Farsan', cursive;
+    transition: all 0.3s ease-out;
+    transform: translateX(-100%);
+    position: absolute;
+    line-height: 1.9;
+    text-align: left;
+    font-size: 120%;
+    cursor: no-drop;
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.info h2 {
+    text-align: center;
+}
+
+.product-image:hover .info {
+    transform: translateX(0);
+}
+
+.info ul li {
+    transition: 0.3s ease;
+}
+
+.info ul li:hover {
+    transform: translateX(50px) scale(1.3);
+}
+
+.product-image:hover img {
+    transition: all 0.3s ease-out;
+    transform: scale(1.2, 1.2);
+}
+/* Ajoutez ceci pour positionner le bouton "like" au-dessus du bouton "Buy" */
+/* Ajoutez ceci pour positionner le bouton "like" en dessous et à gauche du bouton "Buy" */
+/* Ajoutez ces styles CSS pour déplacer le bouton "like" au-dessus du bouton "Buy" */
+
+
+.like-button-container {
+  display: inline-block; /* Permet de s'adapter à la taille du contenu */
+}
+
+.like-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 200px; /* Ajustez cette valeur selon vos préférences */
+  left: 3%;
+  padding: 5px; /* Espace à l'intérieur du cadre */
+  border: 1px solid #ccc; /* Bordure du cadre */
+  border-radius: 5px; /* Coins arrondis du cadre */
+}
+
+.heart-icon {
+  font-size: 36px; /* Taille du cœur */
+  color: white; /* Couleur de base du cœur */
+  transition: color 0.3s; /* Transition de couleur lors du survol */
+  margin-left: 10px; /* Espacement entre le cœur et le nombre de likes */
+
+}
+
+.heart-icon:hover {
+  color: red; /* Couleur rouge lors du survol */
+}
+
+.like-count {
+  margin-left: 10px; /* Espacement entre le cœur et le nombre de likes */
+  font-size: 24px; /* Taille du nombre de likes */
+  color: rgb(157, 255, 0); /* Couleur du nombre de likes */
+}
+
+
+/*-------------sidebare----------*/
+/* Your existing CSS styles */
+
+/* Add the provided CSS styles below */
+/* Styles for the shopping cart */
+.cart {
+    width: 320px;
+    border: 1px solid #eaeaea;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  .cart__content {
+    padding: 2rem;
+  }
+
+  .cart__inner {
+    margin-bottom: 35px;
+  }
+
+  .cart__list {
+    margin: 0;
+  }
+
+  .cart__item {
+    padding: 1rem 0;
+    border-top: 2px solid #eaeaea;
+  }
+
+  .cart__item:last-child {
+    border-bottom: 2px solid #eaeaea;
+  }
+
+  .cart__item-top {
+    min-height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .cart__item-bottom {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .cart__img-wrap img {
+    max-width: 110%; /* Ensures the image doesn't exceed the container's width */
+    max-height: 110%; /* Ensures the image doesn't exceed the container's height */
+}
+.cart__img-wrap {
+    width: 50px;
+    margin-right: 10px; /* Adjust spacing between image and text */
+}
+
+  .cart__item-title {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-height: 35px;
+    word-break: break-word;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .cart__item-title::after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    right: 0;
+    top: 21px;
+    height: 8px;
+    background: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff 100%, #fff 0, #fff);
+  }
+
+  .cart__item-qty {
+    display: table-cell;
+    width: 40%;
+  }
+
+  .cart__item-price {
+    font-weight: bold;
+    display: table-cell;
+    width: 30%;
+  }
+
+  .cart__total {
+    padding: 5px 0 24px;
+  }
+
+  .cart__link {
+    display: inline-block;
+    margin: auto;
+    text-decoration: underline;
+  }
+
+  .b-qty {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .b-qty__field {
+    width: 60px;
+    margin: 0;
+  }
+
+  /* Styles for the off-canvas sidebar */
+  .off-canvas {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -320px; /* Initially hide the sidebar outside the viewport */
+    width: 320px;
+    transition: right 0.3s ease; /* Add transition for smooth animation */
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .position-right {
+    right: 0; /* Set the sidebar to appear from the right */
+  }
+
+  .cart__item-container {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.cart__item-details {
+    flex-grow: 1; /* Allows the details to take up remaining space */
+}
+.cart__item-details p {
+    margin: 0; /* Remove default margin for paragraphs */
+}
+.cart__item-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.cart__content {
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.cart__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.cart__item {
+    /* Other styles */
+    margin-bottom: 10px; /* Add some spacing between items */
+}
+/* Style for the delete button */
+.cart__item-delete {
+    margin-left: auto; /* Align the delete button to the right */
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn i {
+    color: #ff0000; /* Set the color of the trash icon */
+    font-size: 18px; /* Adjust the font size of the icon */
+}
+
+/* Optional: Add hover effect for the delete button */
+.delete-btn:hover i {
+    color: #cc0000; /* Change the color of the trash icon on hover */
+}
+
+
+.cart-icon {
+  display: flex;
+  align-items: center; /* Alignement vertical */
+   /* Alignement à droite */
+  margin-left: 100px;
+}
+
+.cart-icon .badge {
+  margin-left: 5px; /* Espace entre l'icône du panier et le badge */
+}
+.qr-code  {
+  float: right; /* Align the QR code to the right */
+  margin-left: 20px; /* Add some margin to separate it from other elements */
+  position: absolute;
+  top: 120px; /* Ajustez cette valeur selon vos préférences */
+  left: 29%;
+}
+.cart__total-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  border-top: 2px solid #ccc;
+  padding-top: 10px;
+}
+.details-button {
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  border: none; /* Supprimer la bordure */
+  padding: 4px 13px; /* Espacement intérieur */
+  font-size: 15px; /* Taille de la police */
+  border-radius: 3px; /* Coins arrondis */
+  cursor: pointer; /* Curseur au survol */
+  transition: background-color 0.3s; /* Animation de transition */
+  position: absolute;
+  top: 200px; /* Ajustez cette valeur selon vos préférences */
+  left: 17%;
+}
+
+.details-button:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}

@@ -1,0 +1,142 @@
+.share-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  z-index: 1000; /* Ensure the dialog appears on top of other content */
+}
+
+button.copy-link {
+  position: relative;
+  background-color: #F2F7FA;
+  width: 100px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  overflow: hidden;
+  transition-duration: 700ms;
+}
+
+button.copy-link span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button.copy-link .copied-text {
+  color: #B5CCF3;
+  opacity: 0;
+}
+
+button.copy-link:focus {
+  background-color: #0E418F;
+  width: 120px;
+  height: 40px;
+  transition-delay: 100ms;
+  transition-duration: 500ms;
+}
+
+button.copy-link:focus .button-text {
+  color: #B5CCF3;
+  transform: translateX(-50%) translateY(-150%);
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+button.copy-link:focus .copied-text {
+  opacity: 1;
+  transition-delay: 300ms;
+  transition-duration: 500ms;
+}
+
+button.copy-link:focus:end {
+  background-color: #FFFFFF;
+  width: 120px;
+  height: 40px;
+  transition-duration: 900ms;
+}
+
+button.share-fb {
+  margin-top: 20px; /* Add margin to separate from the Copy link button */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  font-family: inherit;
+  font-size: 18px;
+  background: rgb(24,119,240);
+  background: linear-gradient(90deg, rgba(24,119,240,1) 0%, rgba(29,37,253,1) 50%, rgba(11,9,140,1) 100%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: grid;
+  grid-template-columns: auto 0fr;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+button.share-fb:hover {
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  grid-template-columns: auto 1fr;
+}
+
+button.share-fb:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button.share-fb span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+button.share-fb svg {
+  transition: all 0.3s;
+}
+
+button.share-fb .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s;
+}
+
+button.share-fb:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: 0.5em;
+  animation: bounce 1.2s ease-in-out;
+}
+
+.text {
+  overflow: hidden;
+}
+
+@keyframes bounce {
+  0% {
+    translate: 0;
+  }
+
+  50% {
+    translate: 0 -8px;
+  }
+
+  100% {
+    translate: 0;
+  }
+}

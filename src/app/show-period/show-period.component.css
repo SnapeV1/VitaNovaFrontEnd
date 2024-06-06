@@ -1,0 +1,289 @@
+/* Define a class for custom titles */
+body {
+  background:  url('../../assets/images/periodd.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+
+  position: relative;
+  font-family: sans-serif;
+  position: relative; /* Maintain relative positioning */
+  padding: 150px;
+  top: -350; /* Adjust the value to move the container up or down */
+  right : 120px;
+
+}
+
+
+
+
+.container::before,
+.container::after {
+  content: "";
+  background-color: #e3e2e017;
+  position: absolute;
+}
+
+.container::before {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  top: 30%;
+  right: 7%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+  border: 1px solid;
+}
+
+.container .box {
+  width: 25em;
+  height: 45em;
+  padding: 1rem;
+  background-color: rgba(11, 10, 10, 0.63);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+  right:50px;
+  overflow: hidden;
+  margin-top: 20px;
+
+}
+
+
+.container .box div p {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.container .box div span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+
+
+.container .box:hover {
+  box-shadow: 0px 0px 20px 1px #53c3043f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
+}
+
+.container .col-lg-4,
+.container .col-md-6 {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+.container .col-lg-4,
+.container .col-md-6 {
+  margin-left: 120px; /* Adjust the value as needed */
+}
+
+.custom-title {
+  font-size: 10px;
+  font-weight: bold;
+  color: #559d12;
+  text-transform: uppercase;
+  display: flex; /* Use flexbox */
+  align-items: center;
+  margin-top: 34px;
+  /* Add some space below title */
+}
+
+/* Update specific titles with the custom class */
+.cycle-length-title,
+.start-date-title,
+.symptoms-title,
+.mood-title {
+  font-family: 'Arial', sans-serif; /* Example: Change font family */
+}
+
+
+
+.col-lg-4 {
+  flex: 0 0 calc(33.333% - 20px); /* Adjust card width */
+  margin: 10px; /* Add some space between cards */
+}
+
+
+
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto; /* Push buttons to the bottom */
+}
+
+.edit-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.edit-svgIcon {
+  width: 17px;
+  transition-duration: 0.3s;
+}
+
+.edit-svgIcon path {
+  fill: white;
+}
+
+.edit-button:hover {
+  width: 120px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgba(123, 173, 32, 0.652);
+  align-items: center;
+}
+
+.edit-button:hover .edit-svgIcon {
+  width: 20px;
+  transition-duration: 0.3s;
+  transform: translateY(60%);
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.edit-button::before {
+  display: none;
+  content: "Edit";
+  color: white;
+  transition-duration: 0.3s;
+  font-size: 2px;
+}
+
+.edit-button:hover::before {
+  display: block;
+  padding-right: 10px;
+  font-size: 13px;
+  opacity: 1;
+  transform: translateY(0px);
+  transition-duration: 0.3s;
+}
+.btn-archive {
+  padding: 9px 15px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+  background: #1e1e1e;
+  cursor: pointer;
+  color: greenyellow;
+  box-shadow: 0 0 10px #363636, inset 0 0 10px #363636;
+}
+
+.btn-archive:hover {
+  animation: a 0.5s 1 linear;
+}
+
+@keyframes a {
+  0% {
+    transform: scale(0.7, 1.3);
+  }
+
+  25% {
+    transform: scale(1.3, 0.7);
+  }
+
+  50% {
+    transform: scale(0.7, 1.3);
+  }
+
+  75% {
+    transform: scale(1.3, 0.7);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.box .carousel {
+  position: absolute;
+  left: 0;
+
+  animation: carousel 10s linear var(--carousel_direction, normal) infinite;
+}
+
+.box .carousel[data-direction="right"] {
+  --carousel_direction: reverse;
+}
+.box .carousel[data-position="top"] {
+  top: 0.75rem;
+}
+.box .carousel[data-position="bottom"] {
+  bottom: 0.75rem;
+}
+
+.box .carousel .carousel__text {
+  font-size: 0.85rem;
+  color: rgb(236, 237, 143);
+  text-wrap: nowrap;
+}
+
+@keyframes carousel {
+  to {
+    transform: translate(-50%);
+  }
+}
+.btn-insights {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica, "sans-serif";
+  transition: all 0.2s;
+  padding: 8px 15px;
+  border-radius: 100px;
+  background: #728308;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+}
+
+.btn-insights:hover {
+  background: #7d8f07;
+}
+
+.btn-insights > svg {
+  width: 30px;
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-insights:hover svg {
+  transform: translateX(5px);
+}
+
+.btn-insights:active {
+  transform: scale(0.95);
+}
+
+
+
+
+

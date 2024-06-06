@@ -1,0 +1,110 @@
+/* Custom CSS for Exercise Table */
+.exercise-table-container {
+  margin-top: 20px;
+}
+
+.exercise-row:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.exercise-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.no-exercises-message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-container {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.alert {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.exercise-row.archived {
+  background-color: #ffe1de;
+  color: white;
+}
+
+.exercise-row.non-archived {
+  background-color: #defdef;
+  color: black;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+ ;
+}
+.descriptionExercise{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+.typeEx{
+  white-space: normal;
+  word-wrap: break-word;
+  width: 150px;
+}
+
+.titleExercise {
+  white-space: normal;
+  word-wrap: break-word;
+  width: 150px;
+}
+
+.pagination-controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination-controls button,
+.pagination-controls span {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px;
+  color:deeppink;
+}
+
+.button-wrapper {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.button-wrapper .btn {
+  margin-right: 5px;
+  padding: 8px;
+
+}

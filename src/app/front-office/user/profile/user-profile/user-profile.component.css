@@ -1,0 +1,1134 @@
+body, html, footer {
+  color: #1a202c;
+  text-align: left;
+  background-color: #e2e8f0;
+  height: auto;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  color: #1a202c;
+  text-align: left;
+  background-color: #e2e8f0;
+  top: 20%;
+  margin-top: 90px;
+  padding: 20px;
+}
+
+.main-body {
+  padding: 15px;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #181818;
+  box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+  
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  border-radius: 50%;
+}
+
+.btn-info {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.btn-info:hover {
+  background-color: #45a049;
+}
+
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.breadcrumb {
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.breadcrumb-item {
+  color: #333;
+  font-weight: bold;
+}
+
+.breadcrumb-item.active {
+  color: #4CAF50;
+}
+
+.list-group-item {
+  background-color: transparent;
+  border: none;
+}
+
+.list-group-item .text-secondary {
+  color: #777;
+}
+
+.list-group-item h6 {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+
+
+
+.reward-btn {
+  width: 120px;
+  height: 40px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.IconContainer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.IconContainer svg {
+  width: 40%;
+  z-index: 3;
+}
+.box-top {
+  transition: all 0.3s;
+}
+.text {
+  width: 70px;
+  height: 100%;
+  font-size: 13px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+.reward-btn:hover .IconContainer .box-top {
+  transform: translateY(-5px);
+}
+
+.reward-btn:hover .coin {
+  transform: translateY(-5px);
+  transition-delay: 0.2s;
+}
+.coin {
+  width: 25%;
+  height: 25%;
+  background-color: #e4d61a;
+  position: absolute;
+  border-radius: 50%;
+  transition: all 0.3s;
+  z-index: 1;
+  border: 2px solid #ffe956;
+  margin-top: 4px;
+}
+
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.down {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+}
+
+.card1 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 90px 5px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.instagram {
+  margin-top: 1.5em;
+  margin-left: 1.2em;
+  fill: #cc39a4;
+}
+
+.card2 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 90px 5px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.facebook {
+  margin-top: 1.5em;
+  margin-left: -.9em;
+  fill: #03A9F4;
+}
+
+.card3 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 5px 90px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.spotify {
+  margin-top: -.6em;
+  margin-left: 1.2em;
+  fill: #00ff00;
+}
+
+.card4 {
+  width: 90px;
+  height: 90px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px 5px 90px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: .2s ease-in-out;
+}
+
+.gmail {
+  margin-top: -.9em;
+  margin-left: -1.2em;
+  fill: #f14336;
+}
+
+.card1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #cc39a4;
+}
+
+.card1:hover .instagram {
+  fill: white;
+}
+
+.card2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #1877f2;
+}
+
+.card2:hover .facebook {
+  fill: white;
+}
+
+.card3:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #00ff00;
+}
+
+.card3:hover .spotify {
+  fill: white;
+}
+
+.card4:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #FF0004;
+}
+
+.card4:hover .gmail {
+  fill: white;
+}
+
+
+/* inspired from this svgbackgrounds.com/ */
+.button {
+  width: fit-content;
+  display: flex;
+  padding: 0.8em 1.1em;
+  gap: 0.4rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+  background: linear-gradient(
+      15deg,
+      #880088,
+      #aa2068,
+      #cc3f47,
+      #de6f3d,
+      #f09f33,
+      #de6f3d,
+      #cc3f47,
+      #aa2068,
+      #880088
+    )
+    no-repeat;
+  background-size: 300%;
+  background-position: left center;
+  transition: background 0.3s ease;
+  color: #fff;
+}
+
+.button:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+
+.button:hover svg {
+  fill: #fff;
+}
+
+.button svg {
+  width: 23px;
+  fill: #f09f33;
+  transition: 0.3s ease;
+}
+
+
+.SocialTitle{
+
+  align-items: center;
+}
+
+
+.ProfileImg {
+  width: 150px; /* Adjust the width and height as needed */
+  height: 150px;
+  border-radius: 50%; /* Makes the image round */
+  border: 2px solid #fff; /* Adds a white border around the image */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+/* Consolidated CSS rules */
+.achbox {
+  background: transparent;
+  color: #23c48c;
+  font-family: 'Merriweather', sans-serif;
+  line-height: 1.2;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: -5em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 90px;font-size: 16px;
+  padding: 0 1.2em;
+  box-sizing: border-box;
+  transition: all .3s ease-out;
+}
+
+/* Animation keyframes refined */
+
+@keyframes ach_in_anim {
+  0% {
+    bottom: -5em;
+    width: 65px;
+    margin-left: -32.5px;
+    border-radius: 50%;
+  }
+  15% {
+    bottom: 2.2em;
+    width: 65px;
+    margin-left: -32.5px;
+  }
+  25% {
+    bottom: 1em;
+    width: 65px;
+    margin-left: -32.5px;
+  }
+  75% {
+    bottom: 1em;
+    width: 65px;
+    margin-left: -32.5px;
+  }
+  85% {
+    bottom: 1em;
+    width: 65px;
+    margin-left: -32.5px;
+    border-radius: 50%;
+  }
+  92% {
+    bottom: 1em;
+    width: 380px;
+    margin-left: -190px;
+    border-radius: 0;
+  }
+  100% {
+    bottom: 1em;
+    width: 350px;
+    margin-left: -175px;
+    border-radius: 0;
+  }
+}
+
+@keyframes ach_current {
+  0% {
+    bottom: 1em;
+    width: 350px;
+    margin-left: -175px;
+  }
+  100% {
+    bottom: 1em;
+    width: 350px;
+    margin-left: -175px;
+  }
+}
+
+@keyframes ach_out_anim {
+  0% {
+    bottom: 1em;
+    width: 350px;
+    margin-left: -175px;
+    border-radius: 50%;
+  }
+  16% {
+    bottom: 1em;
+    width: 65px;
+    margin-left: -32.5px;
+    border-radius: 50%;
+  }
+  20% {
+    bottom: 1em;
+    width: 50px;
+    margin-left: -25px;
+  }
+  34% {
+    bottom: 1em;
+    width: 65px;
+    margin-left: -32.5px;
+  }
+  70% {
+    bottom: 1em;
+    width: 65px;
+    margin-left: -32.5px;
+  }
+  100% {
+    bottom: -5em;
+    width: 65px;
+    margin-left: -32.5px;
+    border-radius: 50%;
+  }
+}
+
+.achieved {
+  animation: ach_in_anim 1.4s, ach_current 3s, ach_out_anim 0.8s;
+  animation-delay: 0s, 1.4s, 4.4s;
+}
+
+@keyframes i_in_anim {
+  0% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(0)
+  }
+  46% {
+    transform: scale(0.4)
+  }
+  50% {
+    transform: scale(1);
+  }
+  55% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes i_current {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes i_out_anim {
+  0% {
+    transform: scale(1);
+  }
+  46% {
+    transform: scale(1);
+  }
+  47% {
+    transform: scale(1.2);
+  }
+  56% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.4)
+  }
+  65% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+.achieved .icon i {
+  animation: i_in_anim 1.4s, i_current 3s, i_out_anim 0.8s;
+  animation-delay: 0s, 1.4s, 4.4s;
+}
+
+@keyframes text_in_anim {
+  0% {
+    width: 0;
+  }
+  85% {
+    width: 0;
+  }
+  100% {
+    width: 260px;
+  }
+}
+
+@keyframes text_out_anim {
+  0% {
+    width: 240px;
+  }
+  12% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* Improved typography */
+.achbox .text_wrap {
+  width: calc(100% - 65px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Styles for icon */
+.ach .icon {
+  width: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Additional styles for achieved state */
+.achieved {
+  bottom: 1em;
+  animation: ach_in_anim 1.4s ease-out, ach_out_anim 0.8s ease-out;
+  animation-delay: 0s, 4.4s;
+}
+
+/* Enhanced color scheme */
+.achieved {
+  background: #14b5d1;
+  color: #fff;
+}
+
+/* Improved hover effect */
+.achbox:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.card-body {
+  padding: 20px;
+}
+
+.progress-info {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.goal {
+  margin-bottom: 15px;
+}
+
+.progress {
+  height: 10px;
+}
+
+.progress-bar {
+  border-radius: 10px;
+}
+
+.progress-label {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+}
+
+.goal-description {
+  margin-top: 10px;
+}
+
+.goal-description span {
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+.goal-description span:first-child {
+  margin-bottom: 5px;
+}
+
+
+   .ProfileCard:hover {
+    transform: translateY(-1.5rem);
+    border-radius: 2.5rem 0 2.5rem 0;
+   }
+
+
+   .ProfileCard {
+    --main-color: #fff;
+    --submain-color: #ccc;
+    --bg-color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    width: 400px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: var(--bg-color);
+    
+    border-radius: 1rem;
+    transition: all 0.4s ease-in;
+    box-shadow: 0.4rem 0.4rem 0.6rem #00000040;
+  
+  }
+  
+  .card__img {
+    height: 192px;
+    width: 100%;
+  }
+  
+  .card__img img {
+    height: 70%;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover; /* Add this line */
+    width: 100%;
+
+  }
+  
+  .card__avatar {
+    position: absolute;
+   
+    background: var(--bg-color);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: calc(50% - 90px);
+  }
+  
+  .card__avatar img {
+    width: 130px;
+    height: 130px;
+  }
+  
+
+.card__img {
+    height: 60%; /* Change height to auto */
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card__avatar {
+    position: flex; /* Remove position: absolute */
+    /* Other styles */
+}
+
+
+
+.text-center {
+    text-align: center; /* Ensure text is centered */
+}
+
+
+
+.walletBalanceCard {
+  width: fit-content;
+  height: 55px;
+  background-color: #1c1f2f;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.svgwrapper {
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.svgwrapper svg {
+  width: 100%;
+}
+.balancewrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 120px;
+  gap: 0px;
+}
+.balanceHeading {
+  font-size: 12px;
+  color: rgb(214, 214, 214);
+  font-weight: 100;
+  letter-spacing: 0.6px;
+}
+.balance {
+  font-size: 13.5px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+
+.StartBtn {
+  width: 150px;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #5cdb95;
+}
+
+.StartBtn span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.StartBtn:active {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+
+/* Style for the profile information card */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the title */
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for the profile information */
+.profile-info {
+  padding: 20px;
+}
+
+/* Style for the headings */
+h6 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* Style for the text */
+.text-secondary {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Style for the edit button */
+.btn-info {
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+
+/* Style for the form */
+form {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the labels */
+.col-form-label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for the inputs */
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the select */
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px;
+}
+
+/* Style for the buttons */
+.btn {
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #138496;
+}
+
+/* Style for the buttons */
+.btn2 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.btn2:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+/* Style for the button group */
+.form-group.row .col-sm-12 {
+  text-align: center;
+  margin-top: 20px;
+}
+.play-button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.play-button {
+  background-color: #1DB954;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+
+
+
+.searchSpotify input[type="text"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.searchSpotify button[type="submit"] {
+  margin-left: 10px;
+}
+
+.searchSpotify ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchSpotify li {
+  margin-bottom: 8px;
+}
+
+.searchSpotify li button {
+  background-color: transparent;
+  color: #1DB954;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.searchSpotify li button:hover {
+  text-decoration: underline;
+}
+.searchSpotify {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.searchSpotify input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.searchSpotify button[type="submit"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.searchSpotify button:hover {
+  background-color: #45a049;
+}
+
+.searchSpotify table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.searchSpotify th,
+.searchSpotify td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+
+}
+
+.searchSpotify th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.searchSpotify tr:hover {
+  background-color: #f5f5f5;
+}
+
+.searchSpotify ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchSpotify li {
+  padding: 0.2rem 0;
+}
+
+.searchSpotify li:hover {
+  background-color: #f5f5f5;
+}
+
+.searchSpotify li button {
+  background-color: transparent;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+}
+
+.searchSpotify li button:hover {
+  text-decoration: underline;
+}
+.searchSpotify th,
+.searchSpotify td {
+    padding: 0.5rem;
+    text-align: center; /* Center the text */
+    vertical-align: middle; /* Center vertically */
+}
+
+.searchSpotify th[colspan="2"],
+.searchSpotify td[colspan="2"] {
+    text-align: left; /* Adjust the alignment for the "Tracks" and "Playlists" headers */
+}
+
+
+
+.button2 {
+  display: flex;
+  background-color: #00DA5A;
+  color: #ffffff;
+  padding: 0.5rem 1.4rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 0.5rem;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: .6s ease;
+}
+
+.button2 svg {
+  height: 30px;
+}
+
+.button2:hover {
+  box-shadow: none;
+}
+
+
+.delete button {
+  width: 160px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  background: #e62222;
+ }
+ 
+ .delete button, .delete button span {
+  transition: 200ms;
+ }
+ 
+ .delete button .text {
+  transform: translateX(35px);
+  color: white;
+  font-weight: bold;
+ }
+ 
+ .delete button .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ .delete button svg {
+  width: 15px;
+  fill: #eee;
+ }
+ 
+ .delete button:hover {
+  background: #ff3636;
+ }
+ 
+ .delete button:hover .text {
+  color: transparent;
+ }
+ 
+ .delete button:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+ }
+ 
+ .delete button:focus {
+  outline: none;
+ }
+ 
+ .delete button:active .icon svg {
+  transform: scale(0.8);
+ }
+ 

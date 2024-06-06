@@ -1,0 +1,17 @@
+<body>
+<div class="container">
+    <div class="recipes-container">
+        <div *ngFor="let restaurant of nearbyRestaurants" class="card">
+        <p class="title">{{ restaurant.name }}</p>
+        <!-- Display restaurant photo -->
+        <img *ngIf="restaurant.photos_sample && restaurant.photos_sample.length > 0" [src]="restaurant.photos_sample[0].photo_url_large" alt="Restaurant Photo" width="300" height="200">
+  
+        <!-- Display other restaurant details -->
+        <p><b>Rating:</b> {{ restaurant.rating }}</p>
+        <p><b>Address:</b> {{ restaurant.full_address }}</p>
+        <p><b>Phone Number:</b> {{ restaurant.phone_number }}</p>
+        <p><b>Opening Status:</b> {{ restaurant.opening_status }}</p>
+        <!-- Add more details as needed -->
+      </div>
+    </div>
+  </div></body>

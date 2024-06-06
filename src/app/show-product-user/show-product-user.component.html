@@ -1,0 +1,127 @@
+
+<div class="aaa">
+  <br><br>
+<br><br>
+<br>
+<br>
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control search-input" placeholder="Rechercher un produit" aria-label="Rechercher un produit" [(ngModel)]="searchTerm" (input)="searchProducts()">
+          <div class="input-group-append">
+         
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <!-- Cart icon with click event to toggle sidebar -->
+    <!-- Cart Icon -->
+    <a (click)="openSideBar()" class="cart-icon">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="badge badge-pill badge-primary">{{ numberOfCommandelines }}</span>
+      <a [routerLink]="'../../vitaNova/Cart'">
+        <span style="margin-left: 10px;"> <i class="fa fa-eye"></i> <!-- Icône "œil" -->
+          Cart</span> <!-- Texte "Cart" avec un espace à gauche -->
+      </a>
+  </a>
+  
+
+  <div *ngIf="showSidebar" class="off-canvas position-right">
+    <div class="cart">
+        <h3 class="cart__title">Shopping Cart</h3>
+        <div class="cart__content">
+            <ul class="cart__list">
+                <li *ngFor="let commandeline of commandelines" class="cart__item">
+                    <div class="cart__item-container">
+                        <div class="cart__img-wrap">
+                            <img [src]="getImageUrl(commandeline.product.picturePr)" alt="Product Image"
+                                class="cart__item-img">
+                        </div>
+                        <div class="cart__item-details">
+                          <p class="cart__item-title">{{ commandeline.product.namePr }}</p>
+                          <p class="cart__item-price">Price: {{ commandeline.product.pricePr }}</p>
+                          <p class="cart__item-quantity">Quantity: {{ commandeline.quantity }}</p>
+                      </div>
+                  </div>
+              </li>
+          </ul>
+          <!-- Display total price -->
+          <p class="cart__total-price"><strong>Total Price:</strong> {{ getTotalPrice() }}</p>
+        </div>
+  </div>
+</div>
+    
+  
+   
+
+  
+  <!-- Include the sidebar component -->
+  
+  
+<!-- Affichage des produits -->
+<!-- Template HTML pour afficher les produits avec le bouton Like -->
+<div id="container">    
+  <!-- Start Product details and image -->
+  <div class="product-details" *ngFor="let product of listeProduits">
+      <div class="product-info">
+          <h1>{{ product.namePr }}</h1>
+       
+          <!-- Product image -->
+          <div class="product-image">
+              <img [src]="product.picturePr" alt="Image du produit">
+              <div class="info">
+                  <h2>Product <br> Details</h2>
+                  <ul>
+                      <li><strong>Prix :</strong> {{ product.pricePr }}</li>
+                      <li><strong>Quantité :</strong> {{ product.quantityPr }}</li>
+                      <li><strong>Catégorie :</strong> {{ product.categoriePr }}</li>
+                      <li><strong>Status :</strong> {{ product.statusPr }}</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    
+       <!-- Like button -->
+       <div class="like-button-container">
+        <button class="like-button" (click)="addLikeToProduct(product.idPr)">
+          <span class="like-count">{{ product.likeCount }}</span>
+          <span class="heart-icon">&#x2665;</span>
+         
+        </button>
+      </div>
+      <div class="details-button-container">
+        <button class="details-button" [routerLink]="['../ProductDetails', product.idPr]">Détails</button>
+      </div>
+    
+    
+      
+    
+    <h4>Description</h4>
+      <p class="Product Details"> {{ product.descriptionPr }}</p>
+    
+      <!-- QR Code -->
+<div class="qr-code">
+  <img *ngIf="product.qrCodeUrl" [src]="product.qrCodeUrl" alt="QR Code" style="max-width: 70px; max-height: 70px;">
+</div>
+
+
+  
+      <div class="control">
+    <button class="btn" (click)="addProductToCart(product.idPr)">
+              <span class="price">Price : {{ product.pricePr }}</span>
+              <span class="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+              <span class="buy">Add to Cart</span>
+          </button>
+      </div>
+  </div>
+  
+
+  <!-- End Product details and image -->
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+</div>

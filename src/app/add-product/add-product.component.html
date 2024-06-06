@@ -1,0 +1,50 @@
+<h2>Add product</h2>
+<form (ngSubmit)="addProduct()" #productForm="ngForm"> <!--productForm  pour accéder aux propriétés et méthodes du formulaire-->
+  <!-- Display error messages for price and quantity -->
+  
+  <div class="form-group">
+    <label for="name">Name :</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.namePr" required><!--directive Angular utilisée pour lier des valeurs des champs de formulaire à des propriétés dans le modèle-->
+  </div>
+  <div class="form-group">
+    <label for="category">Category :</label>
+    <select class="form-control" id="category" name="category" [(ngModel)]="product.categoriePr" required>
+      <option value="NUTRITION">NUTRITION</option>
+      <option value="Fitness_Equipement">Fitness Equipment</option>
+      <option value="Mentall_wellbeing">Mental Well-being</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="price">Price :</label>
+    <input type="number" class="form-control" id="price" name="price" [(ngModel)]="product.pricePr" required>
+  </div>
+  <div class="form-group">
+    <label for="quantity">Quantity :</label>
+    <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="product.quantityPr" required>
+  </div>
+  <div class="form-group">
+    <label for="description">Description :</label>
+    <input type="text" class="form-control" id="description" name="description" [(ngModel)]="product.descriptionPr">
+  </div>
+  <div class="form-group">
+    <label for="status">Status :</label>
+    <select class="form-control" id="status" name="status" [(ngModel)]="product.statusPr" required>
+      <option value="AVAILABLE">AVAILABLE</option>
+      <option value="NOT AVAILABLE">NOT AVAILABLE</option>
+      
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="picture">Image :</label>
+    <input type="file" class="form-control-file" id="picture" name="picture" (change)="onFileSelected($event)" accept="image/*" required>
+    <span *ngIf="imagePreview">
+      <img [src]="imagePreview" alt="Image Preview" style="max-width: 100%; max-height: 200px;">
+    </span>
+  </div>
+  <!-- Add a preview of the selected image -->
+  <div *ngIf="imageUrl" class="form-group">
+    <label>Image preview :</label>
+    <img [src]="imageUrl" class="img-thumbnail" alt="Selected Image">
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!productForm.valid">Add Product</button>
+</form>

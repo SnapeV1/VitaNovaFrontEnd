@@ -1,0 +1,66 @@
+<div class="bodytimer">
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="timer-container">
+          <div class="timer-content">
+            <div class="base-timer">
+              <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="base-timer__circle">
+                  <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+                  <path
+                    [ngClass]="timerClass"
+                    id="base-timer-path-remaining"
+                    stroke-dasharray="283"
+                    class="base-timer__path-remaining"
+                    d="
+                      M 50, 50
+                      m -45, 0
+                      a 45,45 0 1,0 90,0
+                      a 45,45 0 1,0 -90,0
+                    "
+                  ></path>
+                </g>
+              </svg>
+              <span id="base-timer-label" class="base-timer__label">{{ formatTime(remainingTime) }}</span>
+            </div>
+          </div>
+          <div class="timer-buttons">
+            <button class="start-button" (click)="startTimer()">Start</button>
+            <button class="stop-button" (click)="stopTimer()">Stop</button>
+          </div>
+        </div>
+
+        <!-- Audio Player -->
+        <div *ngIf="mp3DownloadLink" class="audio-player">
+          <audio id="audioPlayer" controls>
+            <source [src]="mp3DownloadLink" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+
+        <h2 class="workout-title">{{ workoutPlan?.title }}</h2>
+        <h2 class="workout-title">{{ workoutPlan?.intensityLevel }}</h2>
+        <div class="current-step">
+          <p>Current Set: {{ currentSet + 1 }}</p>
+        </div>
+
+        <!-- Display the exercise image -->
+        <div class="exercise-image" *ngIf="currentExerciseImage">
+          <img [src]="currentExerciseImage" alt="Exercise Image">
+        </div>
+
+        <div class="card-body-ex">
+          <div class="exercise-details">
+            <div class="card exercise-card" *ngFor="let exercise of workoutPlan.exercises; let i = index">
+              <div class="card-body">
+                <h5 class="card-title">{{ exercise.workout }}</h5>
+                <!-- Add more exercise details here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

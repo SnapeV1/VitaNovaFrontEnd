@@ -1,0 +1,95 @@
+    
+     <!-- dialog-plan.component.html -->
+     <div class="container">
+   
+
+<div class="plan" *ngIf="!showPaymentForm">
+    <div class="inner">
+        <span class="pricing">
+            <span>
+                $10 <small>/ m</small>
+            </span>
+        </span>
+        <p class="title">Monthly Plan.</p>
+        <p class="info"> .</p>
+        <ul class="features">
+            <li>
+                <span class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                    </svg>
+                </span>
+                <span><strong>weakly</strong> Discounts</span>
+            </li>
+            <li>
+                <span class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                    </svg>
+                </span>
+                <span>Free<strong>Shipping</strong></span>
+            </li>
+            <li>
+                <span class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                    </svg>
+                </span>
+                <span>Unlimited exercises</span>
+            </li>
+        </ul>
+        <div class="action">
+            <button class="button" (click)="togglePaymentForm(1000)">Choose Plan</button>
+
+        </div>
+        
+    </div>
+</div>
+<div class="plan" *ngIf="!showPaymentForm">
+    <div class="inner">
+        <span class="pricing">
+            <span>
+                $100 <small>/ y</small>
+            </span>
+        </span>
+        <p class="title">Yearly Plan</p>
+        <p class="info"> .</p>
+        <ul class="features">
+            <li>
+                <span class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                    </svg>
+                </span>
+                <span><strong>weakly</strong> Discounts</span>
+            </li>
+            <li>
+                <span class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                    </svg>
+                </span>
+                <span>Free<strong>Shipping</strong></span>
+            </li>
+            <li>
+                <span class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                    </svg>
+                </span>
+                <span>Unlimited exercises</span>
+            </li>
+        </ul>
+        <div class="action">
+            <button class="button" (click)="togglePaymentForm(10000)">Choose Plan</button>
+
+        </div>
+    </div>
+</div>
+</div>

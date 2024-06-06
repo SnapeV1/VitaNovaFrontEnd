@@ -1,0 +1,17 @@
+.section{
+  background: black;
+}
+.main-banner{
+  background: black;
+}
+/* Specific styles for elements within the front office container */
+.front-office-container {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Apply background color to the front office container */
+  background-color: black; /* Change to your desired background color */
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+   
+</head>
+
+
+
+<body>
+    <div class="containerForm" >
+        <a class="back" *ngIf="showResetPasswordForm" (click)="goback()">
+        <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024"><path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path></svg>
+          
+        </a>
+        <h2>{{ getButtonLabel() }}</h2>
+        <form *ngIf="!showResetPasswordForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                                <input id="inputField" type="text" class="form-control" name="username" placeholder="username"  [(ngModel)]="authRequest.username" required>
+                                <label for="username" class="form-label">Username</label>
+                                <svg viewBox="0 0 448 512" class="userIcon"><path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"></path></svg>
+                
+                            </div>
+            <div class="form-group">
+               
+                <input type="password" id="inputField2" class="form-control" name="password" placeholder="**********" [(ngModel)]="authRequest.password" required>
+                <label for="password" class="form-label2">Password</label>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"  viewBox="0 0 16 16" class="keyIcon">
+                    <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                  </svg>
+                  <span *ngIf="!loginAttempt" class="loginAttempt"> username or password is incorrect</span>
+
+                <a (click)="showResetPasswordForm = true">Forgot Password?</a><a routerLink="/signup">Create an account?</a>
+            </div>
+            <button type="submit" class="button">Login</button>
+           
+        </form>
+        <div id="google-btn" style="margin-top: 2em;">
+
+        </div>
+        <form *ngIf="showResetPasswordForm && !verified" (ngSubmit)="sendVerificationCode()">
+            <div class="form-group2">
+                <div class="mydict">
+                    <label for="phoneRadio">
+                          <input type="radio" id="phoneRadio" name="resetMethod" value="phone"  [(ngModel)]="resetMethod">
+                        <span> Phone Number</span></label>
+                        <label for="emailRadio">
+                          <input type="radio" id="emailRadio" name="resetMethod" value="email" [(ngModel)]="resetMethod">
+                        <span>Email</span></label><br>
+                      </div>
+                      </div>
+                      <div class="form-group2" *ngIf="resetMethod === 'email'">
+                          <label for="emailLabel" class="phoneNumberLabel"> Email </label>
+                          <input type="text" id="inputField" class="inputEmail" name="email" [(ngModel)]="email" required placeholder="Jhon@gmail.com">
+                      </div>
+                      <div class="form-group2" *ngIf="resetMethod === 'phone'">
+                        
+                          <label for="phoneNumberLabel" class="phoneNumberLabel">Phone Number</label>
+                          <div class="phoneGroup">
+                     
+                            <label for="" class="usernamelabel">+216 </label>
+                          <input type="text" id="usernameField" class="phoneNumber" name="phoneNumber" pattern="\d+" maxlength="8"   [(ngModel)]="phoneNumber" required placeholder="12345678">
+                       
+                        </div>
+                        </div>
+                     
+                      <button (click)="sendVerificationCode()" [disabled]="isButtonDisabled" class="btn-link">
+                        Send Code
+                        <span *ngIf="isButtonDisabled" class="timer"> {{ countdown }}</span>
+                      </button>
+              <div class="form-group2">
+                <label for="verificationCode">Verification Code : </label>
+                <input type="text" id="inputField4" class="form-verificationCode" name="verificationCode" maxlength="6"   [(ngModel)]="verificationCode" required>
+            </div>
+              <button type="button" class="btn-link" (click)="verifyCode()">Verify Code</button>
+          </form>
+          
+          <form *ngIf="showResetPasswordForm && verified">
+              <div class="form-group2">
+                  <label for="newPassword">New Password</label>
+                  <input type="password" id="inputField" class="form-control" name="newPassword" [(ngModel)]="newPassword" required>
+              </div>
+              <div class="form-group2">
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input type="password" id="inputField" class="form-control" name="confirmPassword" [(ngModel)]="confirmPassword" required>
+              </div>
+              <button type="button" class="btn-link" (click)="savePassword()">Save</button>
+          </form>
+          
+        
+    
+    <p class="text-danger" *ngIf="errorMessage">{{errorMessage}}</p>
+</div>
+
+</body>
+
+
+</html>

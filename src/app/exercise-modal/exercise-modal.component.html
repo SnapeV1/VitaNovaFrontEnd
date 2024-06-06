@@ -1,0 +1,22 @@
+<div class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>{{ exercise.title }}</h2>
+      <button (click)="closeModal()">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="exercise-image">
+        <img [src]="exercise.picture" alt="{{ exercise.title }}">
+      </div>
+      <div>Description: {{ exercise.description }}</div>
+      <div>Type: {{ exercise.typeEx }}</div>
+      <div>Body Part: {{ exercise.bodypart }}</div>
+      <div>Intensity: {{ exercise.intensity }}</div>
+      <div>Sets: {{ exercise.sets }}</div>
+      <div>Reps: {{ exercise.reps }}</div>
+      <!-- Add other exercise details here if necessary -->
+    </div>
+  </div>
+</div>

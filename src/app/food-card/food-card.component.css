@@ -1,0 +1,255 @@
+/* Navbar styling */
+
+
+/* Content styling */
+.content {
+  display: flex;
+  background-color: black;
+  /*flex-direction: column; /* Affichage en colonne pour les éléments enfants */
+  /*min-height: 50vh; /* Hauteur minimale de la fenêtre visible */
+}
+
+/* Sidebar styling */
+.sidebar-food {
+  position: fixed;
+  top:100px;
+  bottom:70px;
+  left: 0;
+  width: 250px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+
+}
+
+.search-filter {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+.search-filter input[type="text"]::placeholder,
+.search-filter p {
+  color: black; /* Définit la couleur du texte en noir */
+}
+.search-filter input[type="text"] {
+  width: 100%;
+}
+.main-content {
+  flex-grow: 1; /* Allow the main content to grow and take up remaining space */
+  padding: 0 270px; /* Add some padding to the main content */
+  margin-top: 100px;
+  background-color: black/* Adjust this value to leave space for the navbar */
+}
+
+
+
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espacement égal entre les cartes */
+  gap: 20px; /* Ajouter un espacement entre les cartes */
+}
+
+
+.card {
+  width: calc(25% - 20px); /* Définir une largeur fixe pour chaque carte */
+  height: 250px; /* Définir une hauteur fixe pour chaque carte */
+  margin: 0 auto 20px; /* Centrer la carte horizontalement et ajouter de la marge en bas */
+}
+
+.card-body {
+  display: flex; /* Utiliser flexbox pour aligner les éléments verticalement */
+  flex-direction: column; /* Aligner les éléments verticalement */
+  align-items: center; /* Centrer les éléments verticalement */
+  justify-content: center; /* Centrer les éléments horizontalement */
+  padding: 10px; /* Ajouter un peu de rembourrage */
+}
+
+
+
+
+.card-title {
+  font-size: 1rem; /* Réduire la taille du titre */
+}
+
+.card-image {
+  width: 100px; /* Ajustez la taille de l'image */
+  height: 100px; /* Ajustez la taille de l'image */
+  border-radius: 50%; /* Rend l'image circulaire */
+  overflow: hidden; /* Cache tout ce qui dépasse du cercle */
+}
+
+.card-image img {
+  width: 100%; /* Ajustez la taille de l'image pour remplir le cercle */
+  height: 100%; /* Ajustez la taille de l'image pour remplir le cercle */
+  object-fit: cover; /* Garantit que l'image couvre entièrement le conteneur circulaire */
+}
+
+
+body {
+  background:#ecf9fa;
+}
+
+.price-range-slider {
+  width:100%;
+  float:left;
+  padding:10px 20px;
+  .range-value {
+    margin:0;
+    & input {
+      width:100%;
+      background:none;
+      color: #000;
+      font-size: 16px;
+      font-weight: initial;
+      box-shadow: none;
+      border: none;
+      margin: 20px 0 20px 0;
+    }
+  }
+
+  .range-bar {
+    border: none;
+    background: #000;
+    height: 3px;
+    width: 96%;
+    margin-left: 8px;
+
+    .ui-slider-range {
+      background:#06b9c0;
+    }
+
+    .ui-slider-handle {
+      border:none;
+      border-radius:50px;
+      background:#fff;
+      border:2px solid #06b9c0;
+      height:17px;
+      width:17px;
+      top: -0.52em;
+      cursor:pointer;
+    }
+    .ui-slider-handle + span {
+      background:#06b9c0;
+    }
+  }
+}
+
+
+.d-flex.justify-content-center {
+  justify-content: center;
+}
+
+/* Pagination button styles */
+/* Pagination Controls */
+.pagination {
+  position: fixed; /* Position fixe */
+  bottom: 20px; /* Espacement depuis le bas */
+  left: 50%; /* Positionnement horizontal au centre */
+  transform: translateX(-50%); /* Centrer horizontalement */
+}
+
+/* Next and Previous button styles */
+.pagination button {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #B4D821;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Chevron icon colors */
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 13px;
+  color: #B4D821;
+}
+
+/* Text color for "Next" */
+.pagination button span {
+  margin-right: 10px;
+}
+
+/* Hover effect */
+.pagination button:hover {
+  background-color: #fff;
+  color: #B4D821;
+}
+
+/* Footer styles */
+
+.btn-apply {
+  --border-radius: 15px;
+  --border-width: 4px;
+  appearance: none;
+  position: relative;
+  padding: 1em 2em;
+  border: 0;
+  background-color: #f9f9f9;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  z-index: 2;
+}
+
+.btn-apply::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(
+    #488cfb,
+    #29dbbc,
+    #ddf505,
+    #ff9f0e,
+    #e440bb,
+    #655adc,
+    #488cfb
+  );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 500ms infinite;
+  animation-play-state: paused;
+}
+
+.btn-apply:hover::after {
+  animation-play-state: running;
+}
+
+@keyframes rotate-hue {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+.btn-apply,
+btn-apply::after {
+  box-sizing: border-box;
+}
+
+.btn-apply:active {
+  --border-width: 5px;
+}
+.btn-success {
+  color: #FFFFFF;
+background:  #B4D821;}
+
+

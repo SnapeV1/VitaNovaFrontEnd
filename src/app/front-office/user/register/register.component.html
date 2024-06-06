@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+
+<body>
+   
+
+
+
+    <div class="main">
+        <label class="theme-switch">
+            <input type="checkbox" class="theme-switch__checkbox" checked (click)="switchModes()">
+            <div class="theme-switch__container">
+                <div class="theme-switch__clouds"></div>
+                <div class="theme-switch__stars-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z"
+                            fill="currentColor"></path>
+                    </svg>
+                </div>
+                <div class="theme-switch__circle-container">
+                    <div class="theme-switch__sun-moon-container">
+                        <div class="theme-switch__moon">
+                            <div class="theme-switch__spot"></div>
+                            <div class="theme-switch__spot"></div>
+                            <div class="theme-switch__spot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </label>
+
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container" [ngClass]="{ 'darkTheme': theme === 'dark' }" *ngIf="registerSection==0">
+                <h2 class="form-title">Sign up</h2>
+
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="keyIcon" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                        <path fill-rule="evenodd"
+                                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                    </svg><i class="form-label">Username</i></label>
+
+                                <input type="text" name="name" class="inputField" placeholder="Username"
+                                    [(ngModel)]="username" [ngModelOptions]="{standalone: true}" required>
+                                <div *ngIf="UsernameExists" class="text-error">Username is already used</div>
+                                <div *ngIf="usernameError" class="text-error">Username is invalid</div>
+
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="keyIcon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                                        <path
+                                            d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z" />
+                                    </svg><i class="form-label">Email</i></label>
+                                <input type="email" name="email" class="inputField" placeholder="Your Email"
+                                    [(ngModel)]="email" [ngModelOptions]="{standalone: true}" [disabled]="verified"
+                                    required>
+                                <div *ngIf="verified" class="text-success">Email verified successfully</div>
+                                <div *ngIf="EmailExists" class="text-error">Email is connected to another account</div>
+                                <div *ngIf="emailError" class="text-error">Email is invalid</div>
+
+                            </div>
+                            <a class="SmallBtn" (click)="sendVerificationCode()" [ngClass]="{'disabled': verified || timerSeconds > 0}">
+                                <small *ngIf="!verified">Send code</small>
+                               
+                                    <small class="timer" *ngIf="timerSeconds > 0">{{ timerSeconds }}</small>
+                                  
+                            </a>
+                             
+
+                            <div *ngIf="!verified" class="form-group">
+                                <input type="text" [(ngModel)]="verificationCode" [ngModelOptions]="{standalone: true}"
+                                    class="form-control" class="inputField" placeholder="Enter Verification Code"
+                                    required>
+                            </div>
+                            <button *ngIf="!verified" type="button" class="btn" (click)="verifyEmail()"
+                                [disabled]="verified">Verify Email</button>
+
+                                
+
+
+
+
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term"
+                                    [(ngModel)]="termsChecked" (ngModelChange)="onTermsChange($event)">
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I accept all
+                                    statements in <a href="#" class="term-service">Terms of service</a></label>
+                                <div *ngIf="termsError" class="text-error">Accept the terms</div>
+
+                            </div>
+                          
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="{{image1}}" alt="sign up image"></figure>
+                        <a routerLink="/login" class="signup-image-link">Already a member?</a>
+                    </div>
+                </div>
+                <div class="form-group form-button">
+                    <button type="button" name="signup" id="signup" class="btnProceed" (click)="next1()">
+                        Proceed
+                        </button>
+                </div>
+                <div id="google-btn-Signup" style="margin-left: 30%;"></div>
+
+            </div>
+
+        </section>
+  
+        <section class="signup">
+            <div class="container" [ngClass]="{ 'darkTheme': theme === 'dark' }" *ngIf="registerSection==1">
+                <h2 class="form-title">Sign up</h2>
+
+                <div class="signup-content">
+
+                    <div class="signup-form">
+                        <form method="POST" class="register-form" id="register-form">
+
+
+
+
+
+                            <div class="form-group">
+                                <label for="re-pass"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="keyIcon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                    </svg> <i class="zmdi zmdi-lock-outline">First Name </i></label>
+                                <input type="text" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}"
+                                    name="firstName" class="inputField" placeholder="Enter First Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="re-pass"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="keyIcon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                                    </svg> <i class="zmdi zmdi-lock-outline">Last Name </i></label>
+
+                                <input type="text" [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}"
+                                    name="lastName" class="inputField" placeholder="Enter Last Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="keyIcon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                    </svg><i class="zmdi zmdi-lock">Password </i></label>
+                                <input type="password" name="pass" class="inputField" placeholder="Password"
+                                    [(ngModel)]="password" (ngModelChange)="onPasswordChange()"
+                                    [ngModelOptions]="{standalone: true}" required>
+                            </div>
+                            <small [style.color]="textColor">{{ strengthText }}</small>
+
+                            <div class="form-group">
+                                <label for="re-pass"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="keyIcon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                        <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                    </svg> <i class="zmdi zmdi-lock-outline">Confirm Password</i></label>
+                                <input type="password" name="re_pass" class="inputField"
+                                    placeholder="Repeat your password" [(ngModel)]="passwordConfirm"
+                                    [ngModelOptions]="{standalone: true}" required>
+
+                            </div>
+
+                            
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="{{image2}}" alt="sign up image"></figure>
+                        <a href="#" class="signup-image-link">Already a member?</a>
+                    </div>
+                </div>
+                <div class="form-group form-button">
+                    <input type="button" name="signup" id="signup" class="btnProceed" value="Proceed"
+                        (click)="next2()">
+                </div>
+                
+             
+            </div>
+          
+
+        </section>
+
+
+
+
+        <section class="signup">
+            <div class="container" [ngClass]="{ 'darkTheme': theme === 'dark' }" *ngIf="registerSection==2">
+                <h2 class="form-title">Sign up</h2>
+
+                <div class="signup-content">
+
+                    <div class="signup-form">
+                        <form method="POST" class="register-form" id="register-form">
+                            <div class="form-group2">
+
+                                <label for="phoneNumberLabel" class="phoneNumberLabel"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="keyIcon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                        <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                    </svg> <i>Phone Number</i></label>
+                                <div class="phoneGroup">
+
+
+                                    <input type="text" class="inputField" name="phoneNumber" pattern="\d+" maxlength="8"
+                                        [(ngModel)]="phoneNumber" required placeholder="12345678">
+
+                                    <div *ngIf="phoneError" class="text-error">Invalid phone number</div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="form-group">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="keyIcon" viewBox="0 0 16 16">
+                                    <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path
+                                        d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5z" />
+                                </svg> <label>Role</label>
+                                <select class="form-control" [(ngModel)]="role" [ngModelOptions]="{standalone: true}"
+                                    name="role">
+                                    <option value="" selected>Select a Role</option>
+                                    <option value="USER">USER</option>
+                                    <option value="NUTRITIONIST">NUTRITIONIST</option>
+                                    <option value="COACH">COACH</option>
+                                </select>
+                                <div *ngIf="roleError" class="text-error">Select a role</div>
+
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="keyIcon" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.5 1a.5.5 0 0 1 0-1h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-3.45 3.45A4 4 0 0 1 8.5 10.97V13H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V14H6a.5.5 0 0 1 0-1h1.5v-2.03a4 4 0 1 1 3.471-6.648L14.293 1zm-.997 4.346a3 3 0 1 0-5.006 3.309 3 3 0 0 0 5.006-3.31z" />
+                            </svg> <label>Gender</label>
+
+                            <div class="gender">
+                                <label class="femalediv">
+                                    <input type="radio" [(ngModel)]="gender" [ngModelOptions]="{standalone: true}"
+                                        value="WOMAN" name="gender" class="female">
+                                    <div class="btn1" id="femalebtn"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="16" height="16" fill="currentColor" class="bi bi-gender-female"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8M3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5" />
+                                            </svg>Female</span></div>
+                                </label>
+                                <label class="malediv">
+                                    <input type="radio" [(ngModel)]="gender" [ngModelOptions]="{standalone: true}"
+                                        value="MAN" name="gender" class="male">
+                                    <div class="btn2" id="malebtn"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                                width="16" height="16" fill="currentColor" class="bi bi-gender-male"
+                                                viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd"
+                                                    d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8" />
+                                            </svg>Male</span></div>
+
+                                </label>
+                            </div>
+                            <div *ngIf="genderError" class="text-error">Gender is mendatory</div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="keyIcon" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                            </svg> <label>Birthdate</label>
+                            <div id="datepicker">
+                                <input type="date" name="birthdate" id="birthdate" [(ngModel)]="dateOfBirth">
+                            </div>
+                            <div *ngIf="DateError" class="text-error">Must be at least 13</div>
+
+                            <div class="form-group">
+                                <label for="picture">Picture</label>
+                                <div class="Neon Neon-theme-dragdropbox">
+                                    <input
+                                        style="z-index: 999; opacity: 0; width: 320px; height: 200px; position: absolute; right: 0px; left: 0px; margin-right: auto; margin-left: auto;"
+                                        name="files[]" id="filer_input2" multiple="multiple" type="file"
+                                        (change)="onFileChanged($event)">
+                                    <div class="Neon-input-dragDrop">
+                                        <div class="Neon-input-inner">
+                                            <div class="Neon-input-icon"><i class="fa fa-file-image-o"></i></div>
+                                            <div class="Neon-input-text">
+                                                <h3>Drag&amp;Drop files here</h3> <span
+                                                    style="display:inline-block; margin: 15px 0">or</span>
+                                            </div><a class="Neon-input-choose-btn blue">Browse Files</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="selectedFile" class="mt-3">
+                                    <strong>Selected Image:</strong>
+                                    <img [src]="selectedFileDataUrl" alt="Selected Image">
+                                  </div>
+                                  
+
+
+
+                              
+                                <small *ngIf="!selectedFile" class="text-danger">Please choose an image file.</small>
+                            </div>
+
+                            
+                        </form>
+                    </div>
+                    
+                    <div class="signup-image">
+                        <figure><img src="{{image3}}" alt="sign up image"></figure>
+                        <a routerLink="/login" class="signup-image-link">Already a member?</a>
+                    </div>
+                </div>  
+             
+                    <button name="signup" id="signup"  (click)="save()">Register</button>
+            </div>
+        </section>
+
+
+    </div>
+    
+</body>
+
+</html>

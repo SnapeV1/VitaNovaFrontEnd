@@ -1,0 +1,95 @@
+<body>
+<div class="form-container" *ngIf="step === 1">
+  <h2 class="heading">Welcome to Goal Setting</h2>
+  <p class="intro">Let's get started by setting your details:</p>
+
+<div class="form-group weight-row row">
+  <label for="weight" class="col-sm-3 col-form-label">Weight(KG)</label>
+  <div class="col-sm-9">
+      <input type="number" class="input" id="weightEdit" name="weight" [(ngModel)]="data.userProfile.weight" value="{{data.userProfile.weight}}">
+  </div>
+</div>
+<div class="form-group weight-row row">
+  <label for="height" class="col-sm-3 col-form-label">Height(CM)</label>
+    <div class="col-sm-9">
+        <input type="number" class="input" id="heightEdit" name="height" [(ngModel)]="data.userProfile.height" value="{{data.userProfile.height}}">
+    
+    </div>
+</div>
+
+
+
+    <div class="btnFull">
+    <button  class="btn" (click)="UpdateUser()" >Continue</button>
+  </div>
+</div>
+
+
+<div class="form-container2" *ngIf="step==2">
+  
+  <section class="container">
+    <div class="card">
+      <div class="content">
+        <div class="h6">Details About your current State</div>
+        <div class="hover_content">
+          <div class="info">
+           
+            <div>Your current weight : {{data.userProfile.weight}}</div>
+
+            <div class="tooltip-container">
+              Your
+              <span class="tooltip">Body mass index</span>
+              <span class="text">BMI</span>
+            </div>
+            is
+            <span class="bmi">{{calculateBMI(data.userProfile.weight, data.userProfile.height)}}</span>
+            <p class="interpretation">({{interpretBMI(calculateBMI(data.userProfile.weight, data.userProfile.height))}})</p>
+          </div>
+          <div class="gender-info">
+            <p>For a <span class="gender">{{data.userProfile.gender === 'MAN' ? 'man' : 'woman'}}</span> with a height of <span class="height">{{data.userProfile.height}}</span> cm</p>
+          </div>
+          <div >
+            dailyNeededCalories : {{calculateDailyCalories(2)}}
+          </div>
+        </div>
+      </div>
+    
+    </div>       
+   
+  
+  </section>
+
+  <div *ngIf="useIdealWeight; else weightInput">
+    Ideal Weight: {{ IdealWeight }}
+  </div>
+  
+  <ng-template #weightInput>
+    <input type="number" [(ngModel)]="IdealWeight" placeholder="Enter your ideal weight" />
+  </ng-template>
+  
+ 
+    <div class="Question">Do you wanna use it as your goal weight?</div>
+    <div class="radio">
+    </div>
+    <div class="radio-input-wrapper">
+      <label class="label">
+         <input class="radio-input" label="Yes" type="radio"  id="yes" name="idealWeight" [value]="true" [(ngModel)]="useIdealWeight" >
+        <div class="radio-design"></div>
+        <div class="label-text">Yes</div>
+       
+      </label>
+      <label class="label">
+     <input class="radio-input" label="No" type="radio" id="no" name="idealWeight" [value]="false" [(ngModel)]="useIdealWeight" checked="true">
+        <div class="radio-design"></div>
+        <div class="label-text">No</div>
+      </label>
+    </div>
+  
+    <div class="input-container">
+      <label for="weeks">Number of weeks to achieve goal:</label>
+      <input type="number" id="weeks" [(ngModel)]="numberOfWeeks" placeholder="Enter number of weeks" />
+    </div>
+<button class="btn" (click)="setGoal()">Set Goal</button>
+</div>
+
+</body>

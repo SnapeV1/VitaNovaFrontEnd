@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<br><br>
+<br><br><br>
+
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <div class="product-details">
+            <div class="product-image">
+                <img [src]="productService.getImageUrl(product.picturePr)" alt="Product Image">
+            </div>
+            <div class="product-info">
+                <h1>{{ product.namePr }}</h1>
+                <br><br>
+                <h2> $ {{ product.pricePr }} </h2>
+                <br>
+                <br>
+                <p>{{ product.descriptionPr }}</p>
+            </div>
+        </div>
+        <button class="back-to-shop-btn" routerLink="/vitaNova/showProductUser"> Back to shop </button> <!-- Ajout du bouton "Retour à la boutique" -->
+    </div>
+    <br>
+    <br>
+</body>

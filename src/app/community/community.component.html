@@ -1,0 +1,94 @@
+<div *ngIf="videoChat">
+    <app-video-chat [cummunityId]="community.id" [url]="chatUrl" [currentUserInfo]="{userName: currentUser.username, id: currentUser.idUser}"></app-video-chat>
+    
+    
+</div>
+<div *ngIf="!videoChat">
+<div class="community">
+
+    <div class="cc">
+        <br>
+        <br><br>
+        <br>
+        <br>
+
+        <br>
+        <router-outlet></router-outlet>
+        <div class="cont">
+
+
+    <div class="TopThree">
+        <table>
+            <thead>
+                <tr>
+                    <div class="commName">
+                    <h1 class="CName"style="color:#b3d821c5; "*ngIf="community!=null">{{community.communityName}} </h1>
+                </div>
+                </tr>
+                <tr>
+                    <td><h2 class="CName"style="color:#b3d821c5; ">Top 3 Active members </h2></td>
+                </tr>
+            </thead>
+            <tbody *ngFor="let u of topThree; let i=index">
+                <tr>
+
+                    <td>
+                        <div class="topUser">
+                        <h3 class="CName" style="color:#b3d821c5; display: inline-block;">{{ increment(i) }}</h3>
+                        &nbsp;
+                        <h3 class="CName" style="color:#b3d821c5; display: inline-block;">{{ u.username }}</h3>
+                    </div>
+                    </td>
+                </tr>
+
+            </tbody>
+            <tfoot>
+                <h5 class="CName" style="color:#b3d821c5; ">Comunity created by {{creatorName}} </h5>
+            </tfoot>
+        </table>
+</div>
+</div>
+
+    </div>
+        <!--
+            <div class="topThree"
+            <ul *ngFor="let a in firstThree">
+                <li>
+                    <tr>
+                    <td>{{a.firstName}}</td>
+                    <td>{{a.lastName}}</td>
+                    </tr>
+                </li>
+            </ul>
+        </div>
+        -->
+        <br><br><br>
+
+        <div class="communication">
+        <div *ngIf="divTest==0 ">
+   <app-communication [currentUser]="currentUser" [idFromParent]="community.id" [communityMembers]="members" (messageEvent)="goToOne($event)"(event)="goToVideoChat($event)"></app-communication>
+        </div>
+        <div *ngIf="divTest!=0 && divTest!=null">
+            <app-one-to-one-com [current]="currentUser" [otherUser]="userToPass" (messageEvent)="BackToChat($event)"></app-one-to-one-com>
+        </div>
+    </div>
+
+
+    <div class="button-container">
+
+        <button type="button" class="btn bg-gradient-success" [routerLink]="['addChallenge',community.id]" *ngIf="amCreator">Add Challenge</button>
+
+        <button type="button" class="btn bg-gradient-success" [routerLink]="['/vitaNova/updateCommunity',community.id]"*ngIf="amCreator">Update</button>
+        <button type="button" class="btn bg-gradient-success" (click)="deleteCommunity()" *ngIf="amCreator">Delete Community</button>
+
+        <button type="button" class="btn bg-gradient-success" (click)="leaveCommunity()"*ngIf="!amCreator">Leave Community</button>
+
+
+    </div>
+</div>
+    <br>
+
+
+
+
+

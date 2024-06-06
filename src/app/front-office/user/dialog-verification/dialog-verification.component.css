@@ -1,0 +1,22 @@
+.dialog-container {
+    font-family: 'Raleway', serif;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .dialog-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .dialog-message {
+    font-size: 16px;
+    color: #666;
+  }
+  

@@ -1,0 +1,157 @@
+body {
+  background: url(../../assets/BackgroundImages/img_3.png);
+  background-size: 1700px 1700px;
+  background-repeat: repeat;
+  background-position: center; /* Center the background image */
+  animation: rotateBackground 10s linear infinite; /* Use the rotateBackground animation */
+}
+
+@keyframes rotateBackground {
+  0% {
+    background-position: center;
+  }
+  25% {
+    background-position: top;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+
+
+
+.meal-cards-container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.meal-card {
+  margin-top:10px;
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.meal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.meal-foods ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.meal-foods li {
+  padding: 10px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.add-food-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.add-food-button:hover {
+  background-color: #B4D821;
+  color: white;
+}
+
+.svg-icon {
+  width: 24px;
+  height: 24px;
+  fill: black;
+}
+.cups-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  flex-direction: row; /* Change flex direction to row */
+}
+
+
+
+.glass {
+  position: relative;
+  width: 90px; /* Adjust the width of each glass */
+  height: 100px; /* Adjust the height of each glass */
+  margin: 0 8px; /* Adjust the margin between glasses */
+  border: 2px solid #1E2752; /* Add a border to the glasses */
+  border-radius: 5px;
+  margin-top:50px/* Add border-radius for a rounded appearance */
+}
+
+.water {
+  position: absolute;
+  background: #4AA7E1;
+  width: 80px; /* Adjust the width of the water */
+  bottom: 0;
+  left: 5px; /* Adjust the left position of the water */
+  height: 0;
+  transition: height 0.5s;
+}
+
+.glassLines {
+  position: absolute;
+  background:#1E2752;
+  height: 100px;
+  width: 4px;
+}
+
+.glassLines:nth-child(1) {
+  transform: rotate(175deg);
+  right: 0;
+}
+
+.glassLines:nth-child(2) {
+  transform: rotate(185deg);
+  left: 0;
+}
+
+.glassLines:nth-child(3) {
+  height: 10px;
+  bottom: 0;
+  left: 23px;
+}
+
+.filled {
+  height: 80%;
+}
+.gray-card {
+  background-color: #f2f2f2; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  margin-top: 20px; /* Add margin at the top to separate from other cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.gray-card p {
+  margin: 0; /* Remove default margin for paragraphs inside the card */
+}
+
+
+
+
+
+
+
+

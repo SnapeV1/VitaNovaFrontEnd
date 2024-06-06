@@ -1,0 +1,42 @@
+/* CSS for mat-calendar */
+.mat-calendar {
+    /* Set width to 100% of its container */
+    width: 100%;
+  
+    /* Set font family */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Style for the calendar header */
+  .mat-calendar-header {
+    /* Customize background color */
+    background-color: #ff7eb9; /* Pink color */
+  
+    /* Customize text color */
+    color: #fff; /* White color */
+  
+    /* Add some padding */
+    padding: 8px;
+  }
+  
+  /* Style for the calendar body */
+  .mat-calendar-body {
+    /* Customize background color */
+    background-color: #fff; /* White color */
+  }
+  
+  /* Style for the selected date */
+  .mat-calendar-body .mat-calendar-body-selected {
+    /* Customize background color */
+    background-color: #ff7eb9; /* Pink color */
+  
+    /* Customize text color */
+    color: #fff; /* White color */
+  }
+  
+  /* Style for the month and year label */
+  .mat-calendar-header .mat-calendar-period-button {
+    /* Customize text color */
+    color: #fff; /* White color */
+  }
+  

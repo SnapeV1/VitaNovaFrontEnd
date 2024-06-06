@@ -1,0 +1,70 @@
+ <!-- ***** Preloader Start ***** -->
+
+  <!-- ***** Preloader End ***** -->
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+            <a routerLink="profile" *ngIf="picture"> <img [src]="'http://localhost/cats/'+ picture" alt="" class="ProfileImg" width="40"></a>
+
+              <div class="col-12">
+
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">Vita<em> Nova</em></a>
+
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+
+                        <li class="scroll-to-section">
+                          <div class="dropdown">
+                            <button  class="dropbtn">Community
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a routerLink="community">My Community</a>
+                              <a routerLink="findCommunity">Find</a>
+                              <a routerLink="addCommunity">New Community </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="scroll-to-section"><a routerLink="showProductUser">Shop</a></li>
+                       
+
+                        <li class="scroll-to-section">
+                          <div class="dropdown">
+                            <button  class="dropbtn">Food
+                              <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                              <a routerLink="mealCard">Tracker</a>
+                              <a routerLink="lowcarb">Low Carb Recipies</a>
+                            </div>
+                          </div>
+                        </li>
+
+                          <li class="scroll-to-section"><a routerLink="PeriodInformation">Period Tracker</a></li>
+
+                          <li class="scroll-to-section"><a routerLink="exerciseworkout">Exercises</a></li>
+
+                          <li class="scroll-to-section"><a routerLink="workoutplan">Workout Plan</a></li>
+
+
+                          <li class="main-button"><a (click)="signOut()">Sign out</a></li>
+                      </ul>
+
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+

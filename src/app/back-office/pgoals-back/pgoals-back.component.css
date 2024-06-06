@@ -1,0 +1,129 @@
+.user-list {
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+td {
+  width: 5%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+  text-align: center;
+
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-table tr.archived-row {
+  background-color: #ffe6e6;
+}
+
+.user-table tr.active-row {
+  background-color: #e6ffe6;
+}
+
+.user-table tr.active-row button {
+  background-color: #dd8787;
+}
+
+.user-table tr.archived-row button {
+  background-color: #a5eea5;
+}
+
+.user-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.user-table button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 80px;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 14px;
+  display: block;
+  margin: 20px auto;
+}
+
+.list-title {
+  text-align: center;
+}
+
+.user-list input[type="text"] {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.user-list input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+.user-list input[type="text"]::placeholder {
+  color: #999;
+}
+.user-table th:nth-child(1),
+.user-table td:nth-child(1) {
+  width: 10%;
+}
+
+.user-table th:nth-child(2),
+.user-table td:nth-child(2) {
+  width: 10%;
+}
+
+.user-table th:nth-child(3),
+.user-table td:nth-child(3) {
+  width: 120%;
+}
+.user-table th:nth-child(4),
+.user-table td:nth-child(4) {
+  width: 20%;
+}
+
+
+
+.user-table th:nth-child(5),
+.user-table td:nth-child(5) {
+  width: 120%;
+}

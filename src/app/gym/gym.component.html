@@ -1,0 +1,24 @@
+<body>
+
+    <div class="container">
+  
+     
+  
+      <div class="recipes-container">
+        <div *ngFor="let gym of nearbyGyms" class="card">
+          <p class="title">{{ gym.name }}</p>
+          <!-- Display gym photo -->
+          <img *ngIf="gym.photos_sample && gym.photos_sample.length > 0" [src]="gym.photos_sample[0].photo_url_large" alt="Gym Photo" width="300" height="200">
+  
+          <!-- Display other gym details as needed -->
+          <p><b>Rating:</b> {{ gym.rating }}</p>
+          <p><b>Address:</b> {{ gym.full_address }}</p>
+          <p><b>Phone Number:</b> {{ gym.phone_number }}</p>
+          <p><b>Opening Status: </b>{{ gym.opening_status }}</p>
+          <!-- Add more details as per your requirement -->
+        </div>
+      </div>
+  
+    </div>
+  </body>
+  

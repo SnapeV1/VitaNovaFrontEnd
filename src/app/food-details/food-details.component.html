@@ -1,0 +1,20 @@
+<div *ngIf="food" class="food-details-container">
+    <h2 class="food-title">{{ food.title }}</h2>
+    <div class="food-image-container">
+        <img [src]="food.foodPic" alt="Food Image" class="food-image">
+    </div>
+  <div *ngIf="food" class="food-details-container">
+    <div class="food-info">
+      <p><strong>Category:</strong> {{ food.category }}</p>
+      <p><strong>Product:</strong> {{ food.title }}</p>
+      <p><strong>Calories:</strong> {{ food.calories }}</p>
+      <p><strong>Protein:</strong> {{ food.protein }}</p>
+      <p><strong>Lipid:</strong> {{ food.lipides }}</p>
+      <p><strong>Sugar:</strong> {{ food.glucides }}</p>
+      <p><strong>Calcium:</strong> {{ food.calcium }}</p>
+      <p><strong>Vitamin C:</strong> {{ food.vitaminC }}</p>
+      <p><strong>Vitamin B6:</strong> {{ food.vitaminB6 }}</p>
+      <p><strong>Vitamin E:</strong> {{ food.vitaminE }}</p>
+    </div>
+  </div>
+</div>

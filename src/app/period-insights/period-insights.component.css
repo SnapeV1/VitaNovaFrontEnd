@@ -1,0 +1,863 @@
+body {
+    background:  url('../../assets/images/periodd.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    
+    position: relative;
+    font-family: sans-serif;
+    position: relative; /* Maintain relative positioning */
+    padding: 150px;
+    top: 150; /* Adjust the value to move the container up or down */
+    left : 300px;
+    
+  }
+  
+  
+  
+  
+  .container::before,
+  .container::after {
+    content: "";
+    background-color: #e3e2e017;
+    position: absolute;
+  }
+  
+  .container::before {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    top: 30%;
+    right: 7%;
+  }
+  
+  .container::after {
+    content: "";
+    position: absolute;
+    height: 3rem;
+    top: 8%;
+    right: 5%;
+    border: 1px solid;
+  }
+  
+  .container .box {
+    width: 25em;
+    height: 85em;
+    padding: 1rem;
+    background-color: rgba(206, 202, 202, 0.238);
+    border: 1px solid rgba(255, 255, 255, 0.222);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 0.7rem;
+    transition: all ease 0.3s;
+    right:50px;
+    overflow: hidden;
+  
+  }
+  
+  
+  .container .box div p {
+    margin: 0;
+    font-size: 0.9em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+  
+  .container .box div span {
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+  
+  
+  
+  .container .box:hover {
+    box-shadow: 0px 0px 20px 1px #53c3043f;
+    border: 1px solid rgba(255, 255, 255, 0.454);
+  }
+  
+  .container .col-lg-4,
+  .container .col-md-6 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+  }
+  .container .col-lg-4,
+  .container .col-md-6 {
+    margin-left: 120px; /* Adjust the value as needed */
+  }
+  .card {
+    width: 320px;
+    height: 150px;
+    background: white;
+    border-radius: 32px;
+    padding: 3px;
+    position: relative;
+    box-shadow: #604b4a30 0px 70px 30px -50px;
+    transition: all 0.5s ease-in-out;
+    left:25px;
+  }
+  
+  .card .mail {
+    position: absolute;
+    right: 2rem;
+    top: 1.4rem;
+    background: transparent;
+    border: none;
+  }
+  
+  .card .mail svg {
+    stroke: #709b12;
+    stroke-width: 3px;
+  }
+  
+  .card .mail svg:hover {
+    stroke: #709b12;
+  }
+  
+  .card .profile-pic {
+    position: absolute;
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    top: 3px;
+    left: 3px;
+    border-radius: 29px;
+    z-index: 1;
+    border: 0px solid #709b12;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out 0.2s, z-index 0.5s ease-in-out 0.2s;
+  }
+  
+  .card .profile-pic img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .card .profile-pic svg {
+    width: 50%;
+    height: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 0px 0px;
+    object-position: 0px 0px;
+    transform-origin: 45% 20%;
+    transition: all 0.5s ease-in-out 0s;
+  }
+  
+  .card .bottom {
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    background: #709b12;
+    top: 80%;
+    border-radius: 29px;
+    z-index: 2;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px inset;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  }
+  
+  .card .bottom .content {
+    position: absolute;
+    bottom: 0;
+    left: 1.5rem;
+    right: 1.5rem;
+    height: 160px;
+  }
+  
+  .card .bottom .content .name {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .card .bottom .content .about-me {
+    display: block;
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 1rem;
+  }
+  
+  .card .bottom .bottom-bottom {
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card .bottom .bottom-bottom .social-links-container {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .card .bottom .bottom-bottom .social-links-container svg {
+    height: 20px;
+    fill: white;
+    filter: drop-shadow(0 5px 5px rgba(165, 132, 130, 0.1333333333));
+  }
+  
+  .card .bottom .bottom-bottom .social-links-container svg:hover {
+    fill: #f55d56;
+    transform: scale(1.2);
+  }
+  
+  .card .bottom .bottom-bottom .button {
+    background: white;
+    color: #fbb9b6;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    box-shadow: rgba(165, 132, 130, 0.1333333333) 0px 5px 5px 0px;
+  }
+  
+  .card .bottom .bottom-bottom .button:hover {
+    background: #f55d56;
+    color: white;
+  }
+  
+  .card:hover {
+    border-top-left-radius: 55px;
+  }
+  
+  .card:hover .bottom {
+    top: 20%;
+    border-radius: 80px 29px 29px 29px;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+  }
+  
+  .card:hover .profile-pic {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    border: 6px solid #1b2c02;
+    box-shadow: rgba(96, 75, 74, 0.1882352941) 0px 5px 5px 0px;
+    transition: all 0.5s ease-in-out, z-index 0.5s ease-in-out 0.1s;
+  }
+  
+  .card:hover .profile-pic:hover {
+    transform: scale(1.3);
+    border-radius: 0px;
+  }
+  
+  .card:hover .profile-pic img {
+    transform: scale(2.5);
+    -o-object-position: 0px 25px;
+    object-position: 0px 25px;
+    transition: all 0.5s ease-in-out 0.5s;
+  }
+  
+  .card:hover .profile-pic svg {
+    transform: scale(2.5);
+    transition: all 0.5s ease-in-out 0.5s;
+  }
+
+  .ovulation-container {
+    display: flex;
+    flex-direction: row; /* Display items horizontally */
+    justify-content: space-around; /* Add space between items */
+  }
+
+
+
+
+
+  .ovulation {
+    --bg: #f2f3e3;
+    --hover-bg: #e9f0dd;
+    --hover-text: #92cb20;
+    max-width: 15ch;
+    max-height: 15ch;
+    text-align: center;
+    background: var(--bg);
+    padding: 1.5em;
+    padding-block: 1.8em;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top:5ch;
+    
+  }
+  
+  .ovulation__body {
+    color: #464853;
+    line-height: 1.5em;
+    font-size: 1em;
+  }
+  
+  .ovulation > :not(span) {
+    transition: .3s cubic-bezier(.6,.4,0,1);
+  }
+  
+  .ovulation > strong {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: -.035em;
+    color: #98c537;
+  }
+  
+  .ovulation span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--hover-text);
+    border-radius: 5px;
+    font-weight: bold;
+    top: 100%;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
+  }
+  
+  .ovulation:hover span {
+    top: 0;
+    font-size: 1.2em;
+  }
+  
+  .ovulation:hover {
+    background: var(--hover-bg);
+  }
+  
+  .ovulation:hover>div,.ovulation:hover>strong {
+    opacity: 0;
+  }
+  img[alt="Chatbot"] {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    width: 250px; /* Set width of the chatbot icon */
+    height: 250px;
+    margin-left:200px;
+   top:300px;
+     /* Set height of the chatbot icon */
+  }
+  
+  /* Apply styles when hovering over the chatbot icon */
+  img[alt="Chatbot"]:hover {
+    opacity: 0.8; /* Reduce opacity to indicate interactivity */
+  }
+  
+
+
+
+
+
+ 
+  
+  .chat-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .chat-window {
+    height: 220px;
+    overflow-y: scroll;
+  }
+  
+
+
+  
+  .message-box.bot {
+    background-color: #454544; /* Blue background for chatbot messages */
+    color: #fff;
+    align-self: flex-end;
+    font-size: 12px;
+
+  }
+  .message-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .chat-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 11px;
+  }
+  
+  .send-button {
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .chatbot-container {
+    position: absolute;
+    top: 130px; /* Adjust the distance from the top as needed */
+    left: 00px; /* Adjust the distance from the right as needed */
+  }
+  
+
+
+  .card_chat {
+
+    width: 260px;
+    color: #7cb502;
+    background-color: #ffffffeb;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    font-weight: bold;
+    position: fixed;
+    top: 30px; /* Adjust the distance from the top as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .chatbot-img {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    cursor: pointer;
+    position: fixed;
+    top: 100px; /* Adjust the distance from the top as needed */
+    right: 20px; /* Adjust the distance from the right as needed */
+    z-index: 1000; /* Ensure it's above other elements */
+  }
+  
+  .chat-window {
+    height: 250px;
+    overflow-y: scroll;
+    padding-bottom: 60px; /* Adjusted padding to accommodate input */
+  }
+  
+  .chat-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 20px); /* Adjusted width to accommodate the send button */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .message-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 11px;
+  }
+  
+  .send-button {
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+
+
+
+  .cardFertile{
+    position: relative;
+    width: 300px;
+    aspect-ratio: 16/9;
+    background-color: #e6e6cb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    top: 40px;
+    left:30px;
+  }
+  
+  .cardFertile svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .cardFertile__image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .cardFertile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f7f7ef;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .cardFertile:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 40px;
+    color: #66ab0c;
+    font-weight: 700;
+  }
+  
+  .cardFertile:hover svg {
+    scale: 0;
+  }
+  
+  .card__description {
+    margin: 10px 0 10px;
+    font-size: 12px;
+    color: #b0b318;
+    line-height: 1.4;
+  }
+  
+  .cardFertile__button {
+    padding: 15px;
+    border-radius: 8px;
+    background: #777;
+    border: none;
+    color: white;
+  }
+  
+  .secondary {
+    background: transparent;
+    color: #777;
+    border: 1px solid #777;
+  }
+
+  
+  .cardFertile ul li {
+    display: inline;
+  }
+  ngx-charts-line-chart {
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
+  ::ng-deep ngx-charts-axis-label text {
+    fill: #ffffff !important;
+  }
+
+
+  .form-container {
+    width: 330px;
+    height: 220px;
+    background: linear-gradient(#f7f6e7, #7a8f05) padding-box,
+                linear-gradient(145deg, transparent 35%,#9fc40b, #eeefc0) border-box;
+    border: 2px solid transparent;
+    padding: 32px 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    margin-left: 20px;
+  }
+  
+  .form-container button:active {
+    scale: 0.95;
+  }
+  
+  .form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  
+  .form-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  
+  .form-container .form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #000000;
+    font-family: inherit;
+    background-color: transparent;
+    border: 1px solid #414141;
+  }
+  
+  .form-container .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    height: 96px;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: inherit;
+  }
+
+  .form-container .form-group input::placeholder {
+    opacity: 0.5;
+  }
+  
+  .form-container .form-group input:focus {
+    outline: none;
+    border-color: #6aac0f;
+  }
+  
+  .form-container .form-group textarea:focus {
+    outline: none;
+    border-color: #566605;
+  }
+  
+  .form-container .form-submit-btn {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    align-self: flex-start;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 40%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+  }
+  
+
+
+
+
+
+  .main {
+    background-color: white;
+    padding: 1em;
+    padding-bottom: 1.1em;
+    border-radius: 15px;
+    margin: 1em;
+    width: 390px;
+    height: 350px;
+    position: fixed;
+    top: 100px; /* Adjust the distance from the top as needed */
+    left: 20px; /* Adjust the distance from the right as needed */
+    z-index: 2000;
+    
+     /* Add this line to float the card to the left */
+  }
+  
+  .loader {
+    display: flex;
+    flex-direction: row;
+    height: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    transform: rotate(180deg);
+    justify-content: right;
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+  }
+  
+  .loader:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+  
+  .currentplaying {
+    display: flex;
+    margin: 1em;
+  }
+  
+  .spotify {
+    width: 50px;
+    height: 50px;
+    margin-right: 0.6em;
+  }
+  
+  .heading {
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+    align-self: center;
+  }
+  
+  .loading {
+    display: flex;
+    margin-top: 1em;
+    margin-left: 0.3em;
+  }
+  
+  .load {
+    width: 2px;
+    height: 33px;
+    background-color: limegreen;
+    animation: 1s move6 infinite;
+    border-radius: 5px;
+    margin: 0.1em;
+  }
+  
+  .load:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .load:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .load:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .play {
+    position: relative;
+    left: 0.35em;
+    height: 1.6em;
+    width: 1.6em;
+    clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+    background-color: black;
+    transform: rotate(-90deg);
+    align-self: center;
+    margin-top: 0.7em;
+    justify-self: center;
+  }
+  
+  .albumcover {
+    position: relative;
+    margin-right: 1em;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(233, 232, 232);
+    align-self: center;
+    border-radius: 5px;
+  }
+  
+  .song {
+    position: relative;
+    transform: rotate(180deg);
+    margin-right: 1em;
+    color: black;
+    align-self: center;
+  }
+  
+  .artist {
+    font-size: 0.6em;
+  }
+  
+  @keyframes move6 {
+    0% {
+      height: 0.2em;
+    }
+  
+    25% {
+      height: 0.7em;
+    }
+  
+    50% {
+      height: 1.5em;
+    }
+  
+    100% {
+      height: 0.2em;
+    }
+  }
+  
+  
+
+
+
+
+  
+   .recommendations{
+    background-color: #444141;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 9px 17px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: none;
+    margin-left: 70px;
+   }
+   
+    .recommendations:hover {
+    background-image: linear-gradient(90deg, #aedd11 0%, #dcc66c 50%, #efdeb6 75%, #a3d145 100%);
+    animation: slidernbw 5s linear infinite;
+    color: #000;
+   }
+   
+   @keyframes slidernbw {
+    to {
+     background-position: 20vw;
+    }
+   }

@@ -1,0 +1,84 @@
+<br><br>
+<div class="findCom">
+<div class="container">   
+        <form [formGroup]="myForm">
+
+            
+                <table>
+                    <tr>
+                        <td>
+                <div class="col"><div class="input-group input-group-outline my-3">
+                    
+                    <input type="email" style="color: azure;" placeholder="Community Name" class="form-control">
+                  </div>
+                </div>
+            </td>
+            <td>
+
+                <div class="col bu"><br><button type="button" class="btn btn-outline-success"  (click)="getCommunityByName()">Search </button></div>
+            </td>
+            </tr>
+            <tr *ngIf="test==2">
+              <td >
+                <h3 style="color: #b3d821c5;">No communities were found by this name !</h3>
+              </td>
+            </tr>
+           
+        </table>
+        </form>
+    </div>
+
+    <br><br>
+
+        <div class="myCards" *ngIf="communities.length>0">
+        <div class="card-group" >
+            <div *ngFor="let item of communities">
+            <div class="card" style="box-shadow: 0px 0px 0px 3px #b4d821;margin-top: 40px;margin-left: 10px;">
+              
+              <div class="card-body text-center">
+                <div class="d-flex mt-n6 mx-auto">
+                 
+                  <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
+                    <h4 style="color: #b4d821;" (click)="joinCommunity(item.id)">Join</h4>
+                  </button>
+                </div>
+                <h5 class="font-weight-normal mt-3">
+                  <a > <h3 style="color: black;">{{item.communityName}} </h3></a>
+                </h5>
+                <p class="mb-0" style="color: black;">
+                  {{item.description}}
+                </p>
+              </div>
+              <hr class="dark horizontal my-0">
+              <div class="card-footer d-flex">
+                <p class="font-weight-normal my-auto" style="color: black;" *ngIf="item.status==true">Acitve</p>
+                <p class="font-weight-normal my-auto" style="color: black;" *ngIf="item.status==false">Inacitve</p>
+                <i class="material-icons position-relative ms-auto text-lg me-1 my-auto" style="color: black;">Creation Date</i>
+                <p class="text-sm my-auto" style="border-left: 50px ;color: black;">{{item.creationDate}}</p>
+              </div>
+            </div>
+            </div>
+
+            </div>
+            <br>
+            <div class="tablefooter">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item" style="margin-right: 10;">
+                   <a style="color: white;cursor: pointer;" (click)="previousPage()">Previous</a>
+                  </li>
+                  <li class="page-item" style="margin-left: 10px;">
+                   <a style="color: white;cursor: pointer;" (click)="nextPage()"> Next</a>
+                  </li>
+                  </ul>
+                  </nav>
+                  </div>
+        </div>
+        <div class="emptycomm1" *ngIf="communities.length==0">
+          <h1 style="color: #b3d821c5;">No Communities found! </h1>
+          <a routerLink="/app/addCommunity"><h1 style="color: #b3d821c5;cursor: pointer;">Click here to create your own and let others join you ... </h1></a>
+          
+
+
+        </div>
+        </div>

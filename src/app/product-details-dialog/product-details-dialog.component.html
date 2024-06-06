@@ -1,0 +1,23 @@
+<!-- product-details-dialog.component.html -->
+
+<div class="product-details-dialog">
+  <h2>{{ data.productDetails.dishes[0].name }}</h2>
+  <div class="details-container">
+    <div class="image-container">
+      <!-- You can uncomment this line if you have an "image" property in your data -->
+      <!-- <img src="{{ data.dishes[0].image }}" alt="Product Image" width="50px"> -->
+      <p><strong></strong><img  [src]="imageUrl" alt="Food Pic Preview" class="img-fluid mt-3"></p>
+    </div>
+    <div class="info-container">
+      <p><strong>Caloric:</strong> {{ data.productDetails.dishes[0].caloric }}</p>
+      <p><strong>Carbon:</strong> {{ data.productDetails.dishes[0].carbon }}</p>
+      <p><strong>Category ID:</strong> {{ data.productDetails.dishes[0].category_id }}</p>
+      <p><strong>Fat:</strong> {{ data.productDetails.dishes[0].fat }}</p>
+      <p><strong>Protein:</strong> {{ data.productDetails.dishes[0].protein }}</p>
+      <!-- Add more lines for other properties as needed -->
+    </div>
+    <div class="boycot" *ngIf="data.boycote">
+      <h2 style="color: red;">BOYCOT THIS PRODUCT!!!!</h2>
+    </div>
+  </div>
+</div>

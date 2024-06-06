@@ -1,0 +1,101 @@
+/* user-list.component.css */
+.user-list {
+    font-family: Arial, sans-serif;
+}
+td {
+    text-align: center; /* Center-align text */
+    vertical-align: middle; /* Vertically center content */
+  }
+.user-table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-left: 0;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.user-table tr.archived-row {
+    background-color: #ffe6e6; /* Lighter red for archived users */
+}
+
+.user-table tr.active-row {
+    background-color: #e6ffe6; /* Lighter green for active users */
+}
+.user-table tr.active-row button{
+    background-color:#dd8787 ;
+
+}
+.user-table tr.archived-row button {
+    background-color: #a5eea5; /* Lighter green for active users */
+
+}
+
+.user-table tr:hover {
+    background-color: #f5f5f5;
+}
+.user-table button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 80px;
+}
+
+select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  
+  /* Style for date input element */
+  input[type="date"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    display: block; /* Ensure the input takes up the full width */
+    margin: 20px ; /* Center the input horizontally */
+  }
+  .user-list {
+    margin-bottom: 20px; /* Add some spacing below the search bar */
+  }
+  
+  .user-list input[type="text"] {
+    padding: 8px 15px; /* Add padding to the input field */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Add border radius for rounded corners */
+    font-size: 16px; /* Increase font size */
+    outline: none; /* Remove outline when focused */
+  }
+  
+  .user-list input[type="text"]:focus {
+    border-color: #007bff; /* Change border color when focused */
+  }
+  
+  .user-list input[type="text"]::placeholder {
+    color: #999; /* Add placeholder color */
+  }
+  .list-title {
+    text-align: center; /* Center the text */
+}

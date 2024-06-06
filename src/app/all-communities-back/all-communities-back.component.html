@@ -1,0 +1,103 @@
+
+<div class="card">
+<div *ngIf="booltest==2">
+
+</div>
+
+
+
+  <table *ngIf="booltest!=2">
+    <tr>
+      <td>
+    <h2>Communities</h2>
+  </td>
+  <td>
+    <div class="ss">
+    
+      
+    
+      <select name="pets" id="pet-select">
+        <option (click)="pageSize(5)" >5</option>
+        <option (click)="pageSize(10)" >10</option>
+        <option (click)="pageSize(15)">15</option>
+      </select>
+    
+      </div>
+    
+  </td>
+  </tr>
+    
+    </table>
+    <div class="table-responsive">
+<table class="table align-items-center mb-0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Community Name</th>
+            <th>Description</th>
+            <th>Members</th>
+            <th>Creation date</th>
+            <th>Status</th>
+            <th>Action</th>
+           
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let a of communities">
+            <td>
+                {{a.id}}
+            </td>
+            <td>
+                {{a.communityName}}
+            </td>
+            <td>
+                {{a.description}}
+            </td>
+            <td>
+                {{a.membres}}
+            </td>
+            <td>
+                {{a.creationDate}}
+            </td>
+            <td>
+                <div *ngIf="a.status==true"> Active</div>
+                <div *ngIf="!a.status==true"> Inactive</div>
+            </td>
+            <td>
+              <button type="button" (click)="deleteCommunity(a.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <div class="tablefooter">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="javascript:;" aria-label="Previous">
+                  <span class="material-icons" (click)="previousPage()">
+                    keyboard_arrow_left
+                  </span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:;" aria-label="Next">
+                  <span class="material-icons" (click)="nextPage()">
+                    keyboard_arrow_right
+                  </span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+              <li>
+                <div *ngIf="booltest==1"><h3 style="color: #495057;">No more communities</h3></div>
+              </li>
+              </ul>
+              </nav>
+    </div>
+    
+</table>
+
+</div>
+        </div>
+   
+
+        

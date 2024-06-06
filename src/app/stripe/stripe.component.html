@@ -1,0 +1,33 @@
+<form (submit)="submitPayment('USD','')">
+    <div class="form-group">
+      <label for="cardNumber">Numéro de carte :</label>
+      <input type="text" id="cardNumber" class="form-control" placeholder="Numéro de carte" required [ngModel]="cardNumber">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="expiryDate">Date d'expiration :</label>
+        <input type="text" id="expiryDate" class="form-control" placeholder="MM/AA" required [ngModel]="expDate">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="cvv">Code CVV :</label>
+        <input type="text" id="cvv" class="form-control" placeholder="CVV" required [ngModel]="cvv">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Payer</button>
+  </form>
+<!--<form (ngSubmit)="processPayment()">
+  <label for="cardName">Nom sur la carte:</label>
+  <input type="text" id="cardName" name="cardName" required>
+
+  <label for="cardNumber">Numéro de carte:</label>
+  <input type="text" id="cardNumber" name="cardNumber" required>
+
+  <label for="expiryDate">Date d'expiration (MM/AAAA):</label>
+  <input type="text" id="expiryDate" name="expiryDate" pattern="(0[1-9]|1[0-2])\/[0-9]{4}" required>
+
+  <label for="cvv">CVV:</label>
+  <input type="text" id="cvv" name="cvv" pattern="[0-9]{3,4}" required>
+
+  <button type="submit">Payer</button>
+</form>
+-->  

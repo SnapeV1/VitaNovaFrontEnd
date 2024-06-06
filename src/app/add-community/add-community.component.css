@@ -1,0 +1,36 @@
+.addDiv {
+    position: absolute;
+    
+    left: 50%;
+    transform: translate(-50%, -75%);
+   height: 400px;
+   max-height: 450px;
+   width: 400px;
+   background-color: rgba(0, 0, 0, 0.689);
+   border-radius: 10px;
+   margin-top: 100px;
+   box-shadow:0px 0px 10px  #b4d821;
+}
+.addCom{
+    
+        height: 1000px;
+        background-image: url(../../assets/BackgroundImages/addCommunity.jpg);
+        background-size: 1800px 1800px;
+    
+}
+.mLabel{
+    font-size: medium;
+    color: #b4d821;
+}
+.dis{
+    margin-left: 45px;
+    margin-top: 20px;
+}
+.addDesc{
+    
+    font-size: medium;
+    color: white;
+}
+.head{
+    margin: 20px;
+}

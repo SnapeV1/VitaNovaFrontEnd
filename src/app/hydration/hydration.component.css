@@ -1,0 +1,55 @@
+.cups-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  flex-direction: row; /* Change flex direction to row */
+}
+
+
+
+.glass {
+  position: relative;
+  width: 100px; /* Adjust the width of each glass */
+  height: 150px; /* Adjust the height of each glass */
+  margin: 0 5px; /* Adjust the margin between glasses */
+  border: 2px solid #fff0ff; /* Add a border to the glasses */
+  border-radius: 5px;
+  margin-top:50px/* Add border-radius for a rounded appearance */
+}
+
+.water {
+  position: absolute;
+  background: #00c9ff;
+  width: 90px; /* Adjust the width of the water */
+  bottom: 0;
+  left: 5px; /* Adjust the left position of the water */
+  height: 0;
+  transition: height 0.5s;
+}
+
+.glassLines {
+  position: absolute;
+  background:white;
+  height: 100px;
+  width: 4px;
+}
+
+.glassLines:nth-child(1) {
+  transform: rotate(175deg);
+  right: 0;
+}
+
+.glassLines:nth-child(2) {
+  transform: rotate(185deg);
+  left: 0;
+}
+
+.glassLines:nth-child(3) {
+  height: 10px;
+  bottom: 0;
+  left: 23px;
+}
+
+.filled {
+  height: 80%;
+}

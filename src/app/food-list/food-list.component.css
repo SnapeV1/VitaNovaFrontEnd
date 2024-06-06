@@ -1,0 +1,110 @@
+/* Food list component styles */
+
+/* Title */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Buttons container */
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* Button styles */
+.btn-action {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Table styles */
+/* Table container */
+.table-container {
+  max-width: 100%;
+  overflow-x: auto; /* Add horizontal scrollbar */
+  border: 1px solid #dee2e6; /* Add border to visually separate the table */
+  border-radius: 5px; /* Add border radius for styling */
+  background-color: #f2f2f2; /* Set background color for the table container */
+  margin-bottom: 20px; /* Add margin for spacing */
+  padding: 10px; /* Add padding for spacing */
+}
+
+/* Table styles */
+.table {
+  width: auto; /* Set table width to auto */
+  margin-bottom: 0; /* Remove default margin to avoid extra space */
+  color: #212529;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Adjust column widths */
+th.product-column,
+td.product-column {
+  width: 150px; /* Adjust width for Product column */
+}
+
+/* Allow content to span multiple lines */
+.product-column {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Striped table rows */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Food picture styles */
+.food-pic {
+  max-width: 100px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Pagination styles */
+.d-flex.justify-content-center {
+  justify-content: center;
+}
+
+/* Pagination button styles */
+.btn-pagination {
+  color: deeppink; /* Text color */
+  background-color: transparent; /* Transparent background */
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0 5px; /* Adjust margin */
+}
+
+/* Icon styles */
+.btn-pagination i {
+  margin-right: 5px; /* Adjust icon spacing */
+}
+
+/* Page number styles */
+.page-number {
+  margin: 0 10px; /* Adjust margin */
+}

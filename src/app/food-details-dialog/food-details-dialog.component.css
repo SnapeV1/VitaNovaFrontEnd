@@ -1,0 +1,64 @@
+.custom-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Ajustez la largeur selon vos besoins */
+  max-width: 600px; /* Limitez la largeur maximale si nécessaire */
+  padding: 20px;
+  background-color: #fff; /* Couleur de fond */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Ombre */
+  border-radius: 10px; /* Coins arrondis */
+  display: flex;
+  flex-direction: column; /* Pour aligner les éléments verticalement */
+}
+
+.mat-dialog-content {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.mat-dialog-title {
+  font-size: 24px; /* Taille de la police du titre */
+  font-weight: bold;
+  margin-bottom: 15px; /* Marge en bas du titre */
+}
+
+.mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px; /* Marge en bas du bouton */
+}
+
+.mat-dialog-actions button {
+  color: #000000; /* Couleur du texte du bouton */
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mat-dialog-actions button:hover {
+  background-color: #c62828; /* Couleur de fond du bouton au survol */
+}
+.mat-dialog-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px; /* Marge en bas du bouton */
+}
+.svg-icon {
+  width: 1em;
+  height: 1em;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: black;
+}
+
+.svg-icon circle {
+  stroke: black;
+  stroke-width: 1;
+}

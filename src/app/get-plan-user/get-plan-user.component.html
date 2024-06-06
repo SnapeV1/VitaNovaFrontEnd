@@ -1,0 +1,57 @@
+
+<body>
+
+<div class="stars">
+  <!-- Add star divs here -->
+  <app-star count="50"></app-star>
+
+  <!-- Repeat as needed -->
+</div>
+<div class="container">
+  <div class="container-workout" >
+
+
+
+  <!-- Loop through unique muscle categories -->
+  <!-- category-container.html -->
+<div *ngFor="let category of uniqueMuscleCategories; let i = index" class="category-container">
+  <h2 class="category">{{ category }}</h2>
+  <!-- Filter workout plans by muscle category and display horizontally -->
+  <div class="workout-scroll-container">
+    <div class="scroll-button scroll-left" (click)="scrollPlans('left', i)">&#8249;</div>
+    <div class="workout-card-container">
+      <div *ngFor="let plan of filteredWorkoutPlans(category).slice(0, 30); let i = index"
+           [class.disabled]="Userplan &&!(i % 5)"
+           (click)="navigateToTimerPage(plan)"
+           class="workout-card">
+        <div class="card-image-container">
+          <img [src]="plan.image" alt="Workout Plan Image">
+          <!-- Move the overlay inside the card-image-container -->
+          <div *ngIf="Userplan &&!(i % 5)" class="overlay">PREMIUM REQUIRED</div>
+        </div>
+        <div class="card-title">{{ plan.title }}</div>
+        <div class="intensity">{{ plan.intensityLevel }}</div>
+      </div>
+    </div>
+    <div class="scroll-button scroll-right" (click)="scrollPlans('right', i)">&#8250;</div>
+  </div>
+</div>
+  <!-- Your List section -->
+  <div class="your-list">
+    <h2 class="category">Your List</h2>
+    <div class="workout-card-container">
+    <div class="card-container">
+      <!-- Loop through user's workout plans -->
+      <mat-card *ngFor="let plan of workoutPlan" (click)="openTimer(plan)" class="workout-card">
+        <mat-card-header class="card-header">
+          <mat-card-title>{{ plan.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="plan.image" alt="{{ plan.title }}" class="card-image">
+      </mat-card>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+

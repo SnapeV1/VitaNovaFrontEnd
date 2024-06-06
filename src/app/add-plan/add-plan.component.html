@@ -1,0 +1,59 @@
+<div class="dialog-container">
+  <div class="filter-container">
+    <h2>Filter</h2>
+    <div class="search-container">
+      <input type="text" placeholder="Search exercises..." [(ngModel)]="searchText">
+      <button (click)="searchExercises()">Search</button>
+    </div>
+    <div class="body-part-filter">
+      <label>Select Body Parts:</label>
+      <div *ngFor="let part of bodyParts">
+        <input type="checkbox" id="{{ part }}" (change)="toggleBodyPart(part)" [checked]="isBodyPartSelected(part)">
+        <label for="{{ part }}">{{ part }}</label>
+      </div>
+      <button (click)="filterExercisesByBodyPart()">Filter</button>
+    </div>
+  </div>
+  <div class="content-container">
+    <h2>Create Workout Plan</h2>
+    <form [formGroup]="workoutForm" (ngSubmit)="confirmSelection()">
+      <div class="form-group">
+        <input type="text" id="title" formControlName="title" class="form-control border-input">
+      </div>
+      <div class="exercise-list">
+        <div class="exercise-item" *ngFor="let exercise of exercises">
+          <label for="{{ exercise.id }}">
+            <input type="checkbox" id="{{ exercise.id }}" [checked]="isSelected(exercise)" (change)="selectExercise(exercise)">
+            {{ exercise.title }}
+          </label>
+        </div>
+      </div>
+      <div class="pagination">
+        <button *ngIf="currentPage > 0" (click)="previousPage()" class="btn btn-pagination">
+          Previous
+        </button>
+        <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>
+        <button *ngIf="currentPage < totalPages - 1" (click)="nextPage()" class="btn btn-pagination">
+          Next
+        </button>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Create Workout Plan</button>
+        <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+    <div class="form-group mt-3">
+      <label for="picture">Upload Image:</label>
+      <div class="custom-file">
+        <input type="file" id="picture" (change)="onFileSelected($event)" class="custom-file-input">
+        <label class="custom-file-label" for="picture">Choose an image</label>
+      </div>
+      <img *ngIf="selectedFile" [src]="getSelectedFileUrl()" alt="Selected Image" class="img-fluid mt-3">
+      <small *ngIf="!selectedFile && workoutForm.get('image')?.invalid && workoutForm.get('image')?.touched" class="text-danger">Please choose an image file.</small>
+    </div>
+    <div *ngIf="alertMessage" [ngClass]="'alert ' + alertType" role="alert">
+      {{ alertMessage }}
+    </div>
+
+  </div>
+</div>

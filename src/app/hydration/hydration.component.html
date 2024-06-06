@@ -1,0 +1,6 @@
+<div class="cups-container">
+  <div class="glass" *ngFor="let glass of glasses" (click)="toggleWater(glass)">
+    <div class="water" [ngClass]="{'filled': glass.filled}"></div>
+    <div class="glassLines"></div>
+  </div>
+</div>

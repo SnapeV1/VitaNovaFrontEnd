@@ -1,0 +1,21 @@
+.action-cell {
+  display: flex;
+
+  align-items: center;
+}
+
+.action-cell button {
+  margin-right: 5px; /* Espacement entre les boutons */
+}
+
+/* CSS pour le bouton "Ajouter un produit" */
+.btn-success {
+top: 140%;
+padding: 8px 20px;
+font-size: 16px;
+border-radius: 5px;
+}
+
+.btn-success:hover {
+background-color: #28a745; /* Couleur de fond au survol */
+}

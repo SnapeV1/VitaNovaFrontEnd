@@ -1,0 +1,79 @@
+<body>
+<div class="meal-cards-container">
+  <!-- Carte pour le petit déjeuner -->
+  <div class="meal-card">
+    <div class="meal-title">Breakfast <button class="add-food-button" (click)="addFoodToMeal(MealType.BREAKFAST)"><svg class="svg-icon" viewBox="0 0 20 20">
+      <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+    </svg></button></div>
+    <div *ngIf="userId.personalGoals" class="meal-calories">  <br>Calories:{{BreakfastCalories}} / {{ userId.personalGoals.dailyNeededCalories*0.27 }}</div> <!-- Display breakfast calories -->
+
+    <div class="meal-foods">
+      <ul>
+        <li *ngFor="let foodCard of breakfastFoodCards">
+          {{ foodCard.food.title }} - Quantity: {{ foodCard.quantity }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Carte pour le déjeuner -->
+  <div class="meal-card">
+    <div class="meal-title">Lunch <button class="add-food-button" (click)="addFoodToMeal(MealType.LUNCH)"><svg class="svg-icon" viewBox="0 0 20 20">
+      <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+    </svg></button></div>
+    <div  *ngIf="userId.personalGoals" class="meal-calories"><br>Calories:{{lunchCalories}} / {{ userId.personalGoals.dailyNeededCalories*0.42 }}</div> <!-- Display lunch calories -->
+    <div class="meal-foods">
+      <ul>
+        <li *ngFor="let foodCard of lunchFoodCards">
+          {{ foodCard.food.title }} - Quantity: {{ foodCard.quantity }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Carte pour le dîner -->
+  <div class="meal-card">
+    <div class="meal-title">Dinner <button class="add-food-button" (click)="addFoodToMeal(MealType.DINNER)"><svg class="svg-icon" viewBox="0 0 20 20">
+      <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+    </svg></button></div>
+    <div *ngIf="userId.personalGoals" class="meal-calories"><br>Calories:{{DinnerCalories}} / {{ userId.personalGoals.dailyNeededCalories*0.25 }}</div> <!-- Display dinner calories -->
+
+    <div class="meal-foods">
+      <ul>
+        <li *ngFor="let foodCard of dinnerFoodCards">
+          {{ foodCard.food.title }} - Quantity: {{ foodCard.quantity }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Carte pour les collations -->
+  <div class="meal-card">
+    <div class="meal-title">Snacks <button class="add-food-button" (click)="addFoodToMeal(MealType.SNACKS)"><svg class="svg-icon" viewBox="0 0 20 20">
+
+      <path d="M14.613,10c0,0.23-0.188,0.419-0.419,0.419H10.42v3.774c0,0.23-0.189,0.42-0.42,0.42s-0.419-0.189-0.419-0.42v-3.774H5.806c-0.23,0-0.419-0.189-0.419-0.419s0.189-0.419,0.419-0.419h3.775V5.806c0-0.23,0.189-0.419,0.419-0.419s0.42,0.189,0.42,0.419v3.775h3.774C14.425,9.581,14.613,9.77,14.613,10 M17.969,10c0,4.401-3.567,7.969-7.969,7.969c-4.402,0-7.969-3.567-7.969-7.969c0-4.402,3.567-7.969,7.969-7.969C14.401,2.031,17.969,5.598,17.969,10 M17.13,10c0-3.932-3.198-7.13-7.13-7.13S2.87,6.068,2.87,10c0,3.933,3.198,7.13,7.13,7.13S17.13,13.933,17.13,10"></path>
+    </svg></button></div>
+    <div *ngIf="userId.personalGoals" class="meal-calories">  <br>Calories:{{test}} /  {{ userId.personalGoals.dailyNeededCalories*0.05 }}</div> <!-- Display dinner calories -->
+
+    <div class="meal-foods">
+      <ul>
+        <li *ngFor="let foodCard of snacksFoodCards">
+          {{ foodCard.food.title }} - Quantity: {{ foodCard.quantity }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="gray-card water-consumption">
+    <h1>Water</h1>
+    <h3>daily objective: 2.00L</h3>
+    <h2>Total Water Consumed: {{ waterConsumed }}L</h2> <!-- Display total water consumed -->
+    <div class="cups-container">
+      <div class="glass" *ngFor="let glass of glasses" (click)="toggleWater(glass)">
+        <div class="water" [ngClass]="{'filled': glass.filled}"></div>
+        <div class="glassLines"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>

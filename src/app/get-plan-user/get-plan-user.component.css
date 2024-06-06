@@ -1,0 +1,300 @@
+/* get-plan-user.component.css */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-workout {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px; /* Adjust as needed to create space below the fixed navbar and button */
+  width: 100%;
+  
+}
+
+
+.workout-card {
+  position: relative; /* Add relative positioning to the card */
+  /*... */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1; /* Add z-index to ensure overlay is on top */
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+body {
+  background: url(../../assets/BackgroundImages/img_3.png);
+  background-size: 1700px 1700px;
+  background-repeat: repeat;
+  background-position: center; /* Center the background image */
+  animation: rotateBackground 10s linear infinite; /* Use the rotateBackground animation */
+}
+
+@keyframes rotateBackground {
+  0% {
+    background-position: center;
+  }
+  25% {
+    background-position: top;
+  }
+  50% {
+    background-position: right;
+  }
+  75% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+
+
+/* Define the starry background */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  transform: rotate(-45deg);
+}
+.star {
+  --star-count: 50;
+  --star-color: var(--primary-color);
+  --star-tail-length: 6em;
+  --star-tail-height: 2px;
+  --fall-duration: 9s;
+  --tail-fade-duration: var(--fall-duration);
+
+  position: absolute;
+  top: var(--top-offset);
+  left: 0;
+  width: var(--star-tail-length);
+  height: var(--star-tail-height);
+  color: var(--star-color);
+  background: linear-gradient(45deg, var(--star-color), transparent);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 6px var(--star-color));
+  transform: translate3d(104em, 0, 0);
+  animation: fall var(--fall-duration) linear infinite, tail-fade var(--tail-fade-duration) ease-out infinite;
+
+  /* Mobile-specific layout adjustment */
+  @media screen and (max-width: 750px) {
+    animation: fall var(--fall-duration) linear infinite;
+  }
+
+  /* Loop through stars */
+  /* This part will need to be implemented in JavaScript or another preprocessor */
+}
+
+/* Define the fall animation */
+@keyframes fall {
+  to {
+    transform: translate3d(-30em, 0, 0);
+  }
+}
+
+/* Define the tail-fade animation */
+@keyframes tail-fade {
+  0%, 50% {
+    width: var(--star-tail-length);
+    opacity: 1;
+  }
+
+  70%, 80% {
+    width: 0;
+    opacity: 0.4;
+  }
+
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+
+/* Define the blink animation */
+@keyframes blink {
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Create a semi-transparent overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the alpha value for the desired transparency */
+  z-index: -1;
+}
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Ensure the image is centered within the container */
+}
+
+.workoutplan{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+
+}
+.footer-workout {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0px;
+  background: black;
+  margin: 0;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+.btncardclass{
+  background-color: transparent;
+  border: 0;
+}
+
+/* Add custom CSS for horizontal scrolling */
+.filter-container {
+  margin-top: 150px;
+}
+
+.category-container {
+  position: relative;
+  overflow-x: hidden; /* Hide overflow */
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.workout-scroll-container {
+  display: flex;
+  width: calc(100% - 60px); /* Occupy full width with space for scroll buttons */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.workout-card {
+  width: 200px; /* Increase the width of the card */
+  height: 200px; /* Increase the height of the card */
+  margin-right: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+.workout-card:last-child {
+  margin-right: 0;
+}
+
+.card-image-container {
+  width: 100%;
+  height: 70%; /* Adjust the height of the image part */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-title {
+  margin: 0;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.scroll-left {
+  left: 0;
+}
+
+.scroll-right {
+  right: 0;
+}
+.workout-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow: hidden;
+
+}
+
+.workout-card-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.scroll-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.scroll-button:hover {
+  opacity: 1;
+}
+.category{
+  color: white;
+}

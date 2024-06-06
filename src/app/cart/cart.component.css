@@ -1,0 +1,58 @@
+body {
+  background-image: url('file:C:/Users/ASUS/Desktop/back.jpg');
+  background-size: 200% 100%;
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+/*.light-gray-background {
+    background-color: #f2f2f2;
+}*/
+/* Style for the table header */
+#cart thead {
+    background-color: #72B215; /* Set background color */
+    color: #fff; /* Set text color */
+  }
+
+  #cart th {
+    padding: 12px; /* Add padding to header cells */
+    text-align: center; /* Center align text */
+  }
+
+  #cart th:first-child {
+    border-top-left-radius: 5px; /* Add rounded corners to the top-left header cell */
+  }
+
+  #cart th:last-child {
+    border-top-right-radius: 5px; /* Add rounded corners to the top-right header cell */
+  }
+  #cart {
+    backdrop-filter: blur(1px); /* Apply a blur effect to the background */
+    background-color: rgba(255, 255, 255, 0.5); /* Set a semi-transparent background color */
+  }
+
+  /* Style for the total amount */
+.text-center  {
+    color: #007bff; /* Set text color */
+    font-weight: bold; /* Make text bold */
+    visibility:  visible; /* Show
+  }
+  .btn-checkout::before {
+    content: "Checkout"; /* Set the content to "Checkout" */
+}
+
+.btn-checkout {
+    padding-right: 30px; /* Add padding to the right of the button to make space for the pseudo-element */
+}
+
+.btn-checkout::before {
+    position: absolute; /* Position the pseudo-element */
+    right: 10px; /* Adjust the position from the right */
+}
+
+
+.test {
+  color: #000;
+}
+.test :hover,.text-center:hover,tr:hover,*{
+  color: #000;
+}

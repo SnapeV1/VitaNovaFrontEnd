@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+
+html, body { height: 100%; margin:0px;
+padding: 0;}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Customize the shape of the dialog */
+.mat-dialog-container.custom-dialog-class {
+    /* Add your custom dialog styles here */
+  
+      border-radius: 20px; 
+    height: auto;
+    width: auto;
+    background-color: aquamarine !important;
+  }
+  

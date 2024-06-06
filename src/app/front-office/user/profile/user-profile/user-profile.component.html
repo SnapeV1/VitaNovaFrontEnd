@@ -1,0 +1,524 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main-body">
+            <nav aria-label="breadcrumb" class="main-breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                </ol>
+            </nav>
+            <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                    <div class="ProfileCard">
+                        <div class="card__img">
+                            <img [src]="'http://localhost/cats/background.jpg'" alt="" class="Img">
+                        </div>
+                        <div class="card__avatar">
+                            <img [src]="'http://localhost/cats/' + profilePictureUrl" alt="" class="ProfileImg">
+                        </div>
+
+                        <div class="mt-3 text-center">
+                            <h2>{{ userProfile.username }} </h2>
+                            <p class="text-secondary mb-1">{{ userProfile.role }}</p>
+                            <p class="text-muted font-size-sm">{{ userProfile.plan }} Account</p>
+                            <button class="button" *ngIf="userProfile.plan === 'FREE'" (click)="openDialogPlan()">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
+                                    <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+                                </svg>
+                                Unlock Pro
+                            </button>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="card mt-3">
+                        <div class="main">
+                            <h2 class="SocialTitle">Social Media</h2>
+
+                            <div class="up">
+                                <button class="card1">
+                                    <svg class="instagram" fill-rule="nonzero" height="30px" width="30px"
+                                        viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g style="mix-blend-mode: normal" text-anchor="none" font-size="none"
+                                            font-weight="none" font-family="none" stroke-dashoffset="0"
+                                            stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter"
+                                            stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero">
+                                            <g transform="scale(8,8)">
+                                                <path
+                                                    d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                                <button class="card2" href="https://www.facebook.com/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24"
+                                        class="facebook" width="24">
+                                        <path
+                                            d="M9.19795 21.5H13.198V13.4901H16.8021L17.198 9.50977H13.198V7.5C13.198 6.94772 13.6457 6.5 14.198 6.5H17.198V2.5H14.198C11.4365 2.5 9.19795 4.73858 9.19795 7.5V9.50977H7.19795L6.80206 13.4901H9.19795V21.5Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="down">
+                                <button class="card3" (click)="test()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="spotify" viewBox="0 0 16 16">
+                                        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+                                      </svg>
+                                </button>
+                                <button class="card4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="24"
+                                        class="gmail" width="24">
+                                        <path
+                                            d="M6 12C6 15.3137 8.68629 18 12 18C14.6124 18 16.8349 16.3304 17.6586 14H12V10H21.8047V14H21.8C20.8734 18.5645 16.8379 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C15.445 2 18.4831 3.742 20.2815 6.39318L17.0039 8.68815C15.9296 7.06812 14.0895 6 12 6C8.68629 6 6 8.68629 6 12Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <span class="title">Profile Information</span>
+<div class="error" *ngIf="this.userProfile.phone==null" style="color: red; font-size: 10px;">*Finish setting your account *</div>
+                            <br>
+                            <div class="profile-info">
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Full Name</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  {{ userProfile.firstName }} {{ userProfile.lastName }}
+                                </div>
+                              </div>
+                              <hr>
+
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Phone Number</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  (+216) {{userProfile.phone}}
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Birthday</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  {{userProfile.dateOfBirth}}
+                                </div>
+                              </div>
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <h6 class="mb-0">Gender</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                  {{userProfile.gender}}
+                                </div>
+                              </div>
+                              <hr>
+
+                              <div class="profile-stats">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Height :</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                    {{ userProfile.height }}
+                                  </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Weight :</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                    {{ userProfile.weight }}
+                                  </div>
+                                </div>
+                                <hr>
+                              </div>
+
+                              <hr>
+                              <div class="row">
+                                <div class="col-sm-12">
+                                  <button *ngIf="!editMode" class="btn2"
+                                    (click)="toggleEditMode()">Edit</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div *ngIf="editMode" class="row">
+                        <form class="col-md-6">
+                            <div class="form-group row">
+                                <label for="firstName" class="col-sm-3 col-form-label">First Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="firstNameEdit" name="firstName"
+                                        [(ngModel)]="userProfile.firstName" value="{{userProfile.firstName}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="lastName" class="col-sm-3 col-form-label">Last Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="lastNameEdit" name="lastName"
+                                        [(ngModel)]="userProfile.lastName" value="{{userProfile.lastName}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="gender" class="col-sm-3 col-form-label">Gender</label>
+                                <div class="col-sm-9">
+                                    <select class="form-control" id="gender" name="gender"
+                                        [(ngModel)]="userProfile.gender">
+                                        <option value="MAN">Male</option>
+                                        <option value="WOMAN">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Birthday -->
+                            <div class="form-group row">
+                                <label for="birthday" class="col-sm-3 col-form-label">Birthday</label>
+                                <div class="col-sm-9">
+                                    <input type="date" class="form-control" id="birthday" name="birthday"
+                                        [(ngModel)]="userProfile.dateOfBirth">
+                                </div>
+                            </div>
+                        </form>
+
+                        <form class="col-md-6">
+                            <div class="form-group row">
+                                <label for="phonenumber" class="col-sm-3 col-form-label">Phone number (+216)</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" id="phonenumberEdit" name="phonenumber"
+                                        [(ngModel)]="userProfile.phone" value="{{userProfile.phone}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="weight" class="col-sm-3 col-form-label">Weight</label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" id="weightEdit" name="weight"
+                                        [(ngModel)]="userProfile.weight" value="{{userProfile.weight}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="height" class="col-sm-3 col-form-label">Height</label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" id="heightEdit" name="height"
+                                        [(ngModel)]="userProfile.height" value="{{userProfile.height}}">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn2" (click)="saveEdits()">Save</button>
+                                    <button type="button" class="btn2"
+                                        (click)="cancelEdit()">Cancel</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="card mt-3" >
+            <div class="main" >
+
+      <button class="button2" (click)="display()">
+        <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>Spotify-color</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Color-" transform="translate(-200.000000, -460.000000)" fill="#ffffff"> <path d="M238.16,481.36 C230.48,476.8 217.64,476.32 210.32,478.6 C209.12,478.96 207.92,478.24 207.56,477.16 C207.2,475.96 207.92,474.76 209,474.4 C217.52,471.88 231.56,472.36 240.44,477.64 C241.52,478.24 241.88,479.68 241.28,480.76 C240.68,481.6 239.24,481.96 238.16,481.36 M237.92,488.08 C237.32,488.92 236.24,489.28 235.4,488.68 C228.92,484.72 219.08,483.52 211.52,485.92 C210.56,486.16 209.48,485.68 209.24,484.72 C209,483.76 209.48,482.68 210.44,482.44 C219.2,479.8 230,481.12 237.44,485.68 C238.16,486.04 238.52,487.24 237.92,488.08 M235.04,494.68 C234.56,495.4 233.72,495.64 233,495.16 C227.36,491.68 220.28,490.96 211.88,492.88 C211.04,493.12 210.32,492.52 210.08,491.8 C209.84,490.96 210.44,490.24 211.16,490 C220.28,487.96 228.2,488.8 234.44,492.64 C235.28,493 235.4,493.96 235.04,494.68 M224,460 C210.8,460 200,470.8 200,484 C200,497.2 210.8,508 224,508 C237.2,508 248,497.2 248,484 C248,470.8 237.32,460 224,460" id="Spotify"> </path> </g> </g> </g></svg>
+        Continue with Spotify
+        </button>
+      <div id="embed-iframe"></div>
+      <div class="searchSpotify" *ngIf="spotifyMode">
+        <form (ngSubmit)="search(searchQuery)">
+            <input type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Search for a song or playlist...">
+            <button type="submit">Search</button>
+        </form>
+        <div *ngIf="!searchResults">
+            <p>No results found.</p>
+        </div>
+
+        <table *ngIf="searchResults">
+            <thead>
+                <tr>
+                    <th colspan="2">Tracks</th>
+                    <th colspan="2">Playlists</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <ul *ngIf="searchResults?.tracks">
+                            <li *ngFor="let track of searchResults.tracks.items">
+                                <button (click)="playTrack(track.uri)">{{ track.name }}</button> by {{ track.artists[0].name }}
+                            </li>
+                        </ul>
+                    </td>
+                    <td colspan="2">
+                        <ul *ngIf="searchResults?.playlists">
+                            <li *ngFor="let playlist of searchResults.playlists.items">
+                                <button (click)="playPlaylist(playlist.uri)">{{ playlist.name }}</button> by {{ playlist.owner.display_name }}
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+           </div></div>
+          </div>
+
+
+
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Personal goals</a></li>
+            </ol>
+        </nav>
+        <div class="card mb-3">
+        <div class="row">
+            <div class="card-body" *ngIf="weightGoal !== 0">
+                <div class="progress-info">
+                    <div class="goal">
+
+                        <span>Your Goal : {{ userProfile.personalGoals.description }}</span>
+
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-primary" role="progressbar" [style.width.%]="calculateWidth()"
+                                aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <span class="progress-label">{{ calculateWidth() | number:'1.1-1' }}%</span>
+                        <div class="goal-description">
+                            <span>Current Weight: {{ userProfile.weight }} kg</span>
+                            <span>Goal Weight: {{ userProfile.personalGoals.weightGoal }} kg</span>
+                            <span>Days Left: {{ daysleft }} days</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="card-body" *ngIf="weightGoal == 0" style=" display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;">
+                <button (click)="openDialog()" class="StartBtn" style="  display: inline-block;
+                text-align: center;
+                vertical-align: middle;
+                ">  <span>Start</span>
+                </button>
+
+            </div>
+        </div>
+        <div id="chart"></div>
+
+</div>
+
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+      <div id="chart"></div>
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <h6 class="mb-0"> <button class="reward-btn">
+                            <span class="IconContainer">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 20"
+                                    class="box-top box">
+                                    <path stroke-linecap="round" stroke-width="4" stroke="#6A8EF6" d="M2 18L58 18">
+                                    </path>
+                                    <circle stroke-width="5" stroke="#6A8EF6" fill="#101218" r="7" cy="9.5" cx="20.5">
+                                    </circle>
+                                    <circle stroke-width="5" stroke="#6A8EF6" fill="#101218" r="7" cy="9.5" cx="38.5">
+                                    </circle>
+                                </svg>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 58 44"
+                                    class="box-body box">
+                                    <mask fill="white" id="path-1-inside-1_81_19">
+                                        <rect rx="3" height="44" width="58"></rect>
+                                    </mask>
+                                    <rect mask="url(#path-1-inside-1_81_19)" stroke-width="8" stroke="#6A8EF6"
+                                        fill="#101218" rx="3" height="44" width="58"></rect>
+                                    <line stroke-width="6" stroke="#6A8EF6" y2="29" x2="58" y1="29" x1="-3.61529e-09">
+                                    </line>
+                                    <path stroke-linecap="round" stroke-width="5" stroke="#6A8EF6" d="M45.0005 20L36 3">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-width="5" stroke="#6A8EF6"
+                                        d="M21 3L13.0002 19.9992"></path>
+                                </svg>
+
+                                <span class="coin"></span>
+                            </span>
+                            <span class="text">Rewards</span>
+                        </button>
+                    </h6>
+                </li>
+            </ol>
+        </nav>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        score: {{userProfile.score}}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-coin" viewBox="0 0 16 16">
+                            <path
+                                d="M5.5 9.511c.076.954.83 1.697 2.182 1.785V12h.6v-.709c1.4-.098 2.218-.846 2.218-1.932 0-.987-.626-1.496-1.745-1.76l-.473-.112V5.57c.6.068.982.396 1.074.85h1.052c-.076-.919-.864-1.638-2.126-1.716V4h-.6v.719c-1.195.117-2.01.836-2.01 1.853 0 .9.606 1.472 1.613 1.707l.397.098v2.034c-.615-.093-1.022-.43-1.114-.9zm2.177-2.166c-.59-.137-.91-.416-.91-.836 0-.47.345-.822.915-.925v1.76h-.005zm.692 1.193c.717.166 1.048.435 1.048.91 0 .542-.412.914-1.135.982V8.518z" />
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path d="M8 13.5a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11m0 .5A6 6 0 1 0 8 2a6 6 0 0 0 0 12" />
+                        </svg>
+                        <div class="walletBalanceCard">
+                            <div class="svgwrapper">
+                                <svg viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="0.539915" y="6.28937" width="21" height="4" rx="1.5"
+                                        transform="rotate(-4.77865 0.539915 6.28937)" fill="#7D6B9D" stroke="black">
+                                    </rect>
+                                    <circle cx="11.5" cy="5.5" r="4.5" fill="#E7E037" stroke="#F9FD50" stroke-width="2">
+                                    </circle>
+                                    <path
+                                        d="M2.12011 6.64507C7.75028 6.98651 12.7643 6.94947 21.935 6.58499C22.789 6.55105 23.5 7.23329 23.5 8.08585V24C23.5 24.8284 22.8284 25.5 22 25.5H2C1.17157 25.5 0.5 24.8284 0.5 24V8.15475C0.5 7.2846 1.24157 6.59179 2.12011 6.64507Z"
+                                        fill="#BF8AEB" stroke="black"></path>
+                                    <path
+                                        d="M16 13.5H23.5V18.5H16C14.6193 18.5 13.5 17.3807 13.5 16C13.5 14.6193 14.6193 13.5 16 13.5Z"
+                                        fill="#BF8AEB" stroke="black"></path>
+                                </svg>
+                            </div>
+
+                            <div class="balancewrapper">
+                                <span class="balanceHeading">Wallet balance</span>
+                                <p class="balance">{{ (userProfile.score * 0.18).toFixed(2) }}$</p>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a>Account Settings</a></li>
+            </ol>
+        </nav>
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="linkEdit" (click)="toggleEditMode2('email')">
+                        {{ userProfile.email }}
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h6 class="mb-0">Password :</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary" id="linkEdit2" (click)="toggleEditMode2('password')">
+                        [PROTECTED]
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-9">
+                        <!-- Empty div to push the delete button to the right -->
+                    </div>
+                    <div class="col-sm-3 text-right">
+                        <div class="delete">
+                            <button class="noselect" (click)="openDelete()">
+                                <span class="text">Delete Account</span>
+                                <span class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="editMode2" class="row">
+            <form class="col-md-6">
+                <div *ngIf="editField === 'email'" class="form-group row">
+                    <label for="email" class="col-sm-3 col-form-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="email" class="form-control" id="emailEdit" name="email"
+                            [(ngModel)]="userProfile.email" value="{{ userProfile.email }}">
+                    </div>
+                </div>
+                <div *ngIf="editField === 'password'" class="form-group row">
+                    <label for="password" class="col-sm-3 col-form-label">New Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="passwordEdit" name="password"
+                            [(ngModel)]="newPassword">
+                    </div>
+                </div>
+                <div *ngIf="editField === 'password'" class="form-group row">
+                    <label for="confirmPassword" class="col-sm-3 col-form-label">Confirm Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="confirmPasswordEdit" name="confirmPassword"
+                            [(ngModel)]="confirmPassword">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn2" (click)="saveEdits()">Save</button>
+                        <button type="button" class="btn2" (click)="cancelEdit2()">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+      
+
+
+    </div>
+    <div class="achbox" #achievementBox>
+        <div class="icon"><i class="fa fa-flag" aria-hidden="true"></i></div>
+        <div class="text_wrap">
+            <p class="title">Cng</p>
+            <span class="detail">You clicked a button</span>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

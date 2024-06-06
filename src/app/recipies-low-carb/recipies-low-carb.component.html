@@ -1,0 +1,46 @@
+<body>
+  <div class="stars">
+    <!-- Add star divs here -->
+    <app-star count="50"></app-star>
+    <!-- Repeat as needed -->
+  </div>
+  <div class="container">
+    <div class="container-recipes">
+      <!-- Loop through unique recipe categories -->
+
+      <!-- Filter recipes by recipe category and display horizontally -->
+      <div class="hidescroller">
+        <div class="recipe-scroll-container">
+          <div class="scroll-button scroll-left" (click)="scrollRecipies('left', 0)">&#8249;</div>
+          <div class="recipe-card-container">
+            <div class="recipe-card" *ngFor="let recipe of recipes" (click)="toggleCardFlip($event)">
+              <div class="card-front">
+                <div class="card-image-container">
+                  <img [src]="recipe.image" alt="Recipe Image">
+                </div>
+                <h4>{{ recipe.name }}</h4>
+                <div class="card-title">Calories: {{ recipe.selectedNutrients.caloriesKCal }}</div>
+                <div class="card-title">Carbs: {{ recipe.selectedNutrients.totalCarbs }}</div>
+                <div class="card-title">Protein: {{ recipe.selectedNutrients.protein }}</div>
+                <div class="card-title">Fat: {{ recipe.selectedNutrients.fat }}</div>
+                <div class="card-title">Sugar: {{ recipe.selectedNutrients.sugar }}</div>
+              </div>
+              <div class="card-back">
+                <h2>Ingredients:</h2>
+                <ul>
+                  <li *ngFor="let ingredient of recipe.ingredients">
+                    {{ ingredient.name }} -{{ ingredient.servingSize.grams }}g
+                  </li>
+                </ul>
+                <h2>Steps:</h2>
+                <ol>
+                  <li *ngFor="let step of recipe.steps">{{ step }}</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- This is the missing closing </div> -->
+  </div>
+</body>

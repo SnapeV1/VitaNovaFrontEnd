@@ -1,0 +1,96 @@
+<body>
+<br><br>
+<br>
+<br>
+<div *ngIf="commandelines.length > 0; else noCommandelines">
+  <h2 style="text-align: center;">Your Cart</h2>
+  <div class="container light-gray-background">
+      <table id="cart" class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th style="width:50%">Product</th>
+            <th style="width:10%">Price</th>
+            <th style="width:8%">Quantity</th>
+            <th style="width:22% ">Subtotal</th>
+            <th style="width:10%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let commandeline of commandelines">
+            <td data-th="Product">
+              <div class="row">
+                <div class="col-sm-2 hidden-xs"><img [src]="cartService.getImageUrl(commandeline.product.picturePr)" alt="Product Image" class="img-responsive" style="max-width: 100px; max-height: 100px; " /></div>
+                <div class="col-sm-10">
+                  <h4 class="nomargin " >{{ commandeline.product.namePr }}</h4>
+                  <p class="test">{{ commandeline.product.descriptionPr }}</p>
+                </div>
+              </div>
+            </td>
+            <td class="test text-center">{{ commandeline.product.pricePr }}</td>
+            <td data-th="Quantity">
+              <input type="number" class="form-control test text-center" 
+              [(ngModel)]="commandeline.quantity" 
+              [max]="commandeline.product.quantityPr" />
+       
+            </td>
+            <td data-th="Subtotal" class="test text-center">{{ commandeline.product.pricePr * commandeline.quantity }}</td>
+            <td class="actions" data-th="">
+              <button class="btn btn-info btn-sm" 
+              [disabled]="commandeline.quantity > commandeline.product.quantityPr"
+               (click)="updateQuantity(commandeline.idOrder, commandeline.quantity)"><i class="fa fa-refresh"></i></button>
+              <button class="btn btn-danger btn-sm" (click)="onDeleteCommandeline(commandeline.product.idPr)">
+                <i class="fa fa-trash-o"></i>
+            </button>
+            
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="visizdble-xs">
+            <td class="test"><strong>Total  {{ getTotalPrice() }}</strong></td>
+          </tr>
+          <tr>
+            <td><a routerLink="../showProductUser" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+
+            <td colspan="2" class="hidden-xs"></td>
+            <td class="test"><strong>Total  {{ getTotalPrice() }}</strong></td>
+            <td><a  (click)="onCheckoutClicked()" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+          </tr>
+         
+        </tfoot>
+      </table>
+    </div>
+  </div>
+  
+  <ng-template #noCommandelines>
+    <div class="container">
+      <table id="cart" class="table table-hover table-condensed">
+        <thead>
+          <tr>
+            <th style="width:50%">Product</th>
+            <th style="width:10%">Price</th>
+            <th style="width:8%">Quantity</th>
+            <th style="width:22%" class="text-center">Subtotal</th>
+            <th style="width:10%"></th>
+          </tr>
+        </thead>
+        
+        <tfoot>
+          <tr class="visible-xs">
+            <td class="test"><strong>Total  {{ getTotalPrice() }}</strong></td>
+          </tr>
+          <tr>
+            <td><a routerLink="../showProductUser" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+
+            <td colspan="2" class="hidden-xs"></td>
+            <td class="hidden-xs text-center"><strong>Total  {{ getTotalPrice() }}</strong></td>
+            <td><a class="btn btn-success btn-block"><strong>Checkout</strong></a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  
+</ng-template>
+<br> <br><br><br><br><br><br><br><br><br>
+</body>
+ 

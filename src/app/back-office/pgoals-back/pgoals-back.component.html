@@ -1,0 +1,41 @@
+<!-- user-list.component.html -->
+<div class="user-list">
+
+    <h2 class="list-title">List of Goals</h2>
+  
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>weight</th>
+                <th>Description</th>
+                <th>GoalWeight</th>
+                <th>dailyNeededCalories</th>
+                <th>Date Goal</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td colspan="8" *ngIf="!Goals">No goals found</td>
+            </tr>
+            <ng-container *ngFor="let user of users">
+                <tr *ngIf="user.personalGoals">
+                    <td  >{{ user.username }}</td>
+                    <td  >{{ user.weight }}</td>
+                    <td contenteditable (blur)="updateGoalProperty($event, user.personalGoals,'description')" >{{ user.personalGoals.description }}</td>
+                    <td contenteditable (blur)="updateGoalProperty($event, user.personalGoals,'weightGoal')"  >{{ user.personalGoals.weightGoal }}</td>
+                    <td contenteditable (blur)="updateGoalProperty($event, user.personalGoals,'dailyNeededCalories')"  >{{ user.personalGoals.dailyNeededCalories }}</td>
+                    <input type="date" (blur)="updateGoalProperty($event, user.personalGoals,'dateGoal')" [(ngModel)]="user.personalGoals.dateGoal"  />
+                   
+
+                   
+                
+                    <td>
+                        <button (click)="deletePg(user)">Delete</button>
+                    </td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

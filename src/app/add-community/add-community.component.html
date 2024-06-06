@@ -1,0 +1,67 @@
+<div class="addCom">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="addDiv">
+    <div class="head">
+        <h2 style="color: #b4d821;"> Creating a new community</h2>
+        <p class="addDesc"> A community is where you can join other members to chat and challenge yourself weekly... </p>
+    </div>
+<form [formGroup]="myForm">
+<table class="dis">
+
+    <tr>
+        
+        <td>
+           
+            
+                           <div class="input-group input-group-static mb-4">
+                <label class="mLabel">Community Name</label>
+                <input type="text" class="form-control"  (focus)="clearError()" formControlName="communityName" style="color: white;" >
+              </div>
+              <div *ngIf="communityName.touched && communityName.value===''"><h5 style="color:#f44335 ;" >*Name Obligatory</h5></div>
+            
+               
+
+               
+            
+              
+
+
+              
+
+        </td>
+    </tr>
+    <tr>
+        
+        <td>
+            <div class="input-group input-group-static mb-4">
+                <label class="mLabel">Description</label>
+                <input type="text" class="form-control"  (focus)="clearError()" formControlName="description" style="color: white;">
+              </div>
+            <div *ngIf="communityName.touched && description.value===''"><h5 style="color:#f44335 ;" >*Description  Obligatory</h5></div>
+ 
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="color: #f44335;">{{error}}</h3>
+        </td>
+    </tr>
+    <tr>
+        
+        <td>
+            
+            
+            <button type="button" class="btn btn-secondary btn-lg w-100" [disabled]="myForm.invalid" (click)="addCommunity()">Create new community</button>
+            
+        </td>
+    </tr>
+
+</table>
+
+</form>
+</div>
+
+<br><br><br><br><br><br>
+</div>

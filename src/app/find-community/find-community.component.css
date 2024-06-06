@@ -1,0 +1,21 @@
+.myCards{
+    margin-left: 20px; /* Espace à gauche */
+    margin-right: 20px; /* Espace à droite */
+}
+.card{
+    width: 300px; /* Largeur fixe de 300 pixels */
+    height: 300px; /* Hauteur fixe de 200 pixels */
+}
+
+.findCom{
+    height: 1800px;
+    background-image: url(../../assets/BackgroundImages/findCommunity.jpg);
+    background-size: 1800px 1800px;
+}
+.container{
+    margin-top: 30px;
+    
+}
+.emptycomm1{
+    margin-left: 100px;
+}

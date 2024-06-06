@@ -1,0 +1,102 @@
+
+<div class="container">
+  <div class="row justify-content-start">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <!-- Ajoutez le bouton pour naviguer vers l'interface d'ajout de produit -->
+          <button class="btn btn-success" routerLink="/admin/addProduct">Add Product</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6">
+<div class="input-group mb-3">
+<input type="text" class="form-control search-input" placeholder="Search Product" aria-label="Entrez un terme de recherche" aria-describedby="button-addon2" [(ngModel)]="searchTerm" (input)="searchProducts()">
+<div class="input-group-append">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<ul>
+<li *ngFor="let product of searchResults">
+{{ product.namePr }} - {{ product.pricePr }}
+</li>
+</ul>
+
+
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6">
+<div class="input-group mb-3">
+<select class="form-select" [(ngModel)]="categoryFilter" (change)="onCategoryChange($event)">
+<option value="ALL" selected>ALL</option>
+<option value="NUTRITION">NUTRITION</option>
+<option value="Fitness_Equipement">Fitness_Equipement</option>
+<option value="Mentall_wellbeing">Mentall_wellbeing</option>
+</select>
+</div>
+</div>
+<div class="col-md-6">
+<!-- Filter by Price -->
+<div for="priceFilter">
+<ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="sliderOptions" (valueChange)="onPriceChange($event)"></ng5-slider>
+<span>Min: {{ minValue }} - Max: {{ maxValue }}</span>
+</div>
+
+
+
+
+
+
+</div>
+</div>
+
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-6">
+<table class="table">
+<thead>
+<tr>
+  <th>Image</th>
+  <th>Name</th>
+  <th>Price</th>
+  <th>Quantity</th>
+  <th>Catégorie</th>
+  <th>Description</th>
+  <th>Status</th>
+  <th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let produit of filteredProducts">
+  <td><img [src]="productService.getImageUrl(produit.picturePr)" alt="Image du produit"  style="width: 150px; height: 150px;"></td>
+  <td>{{ produit.namePr }}</td>
+  <td>{{ produit.pricePr }}</td>
+  <td>{{ produit.quantityPr }}</td>
+  <td>{{ produit.categoriePr }}</td>
+  <td>{{ produit.descriptionPr }}</td>
+  <td>{{ produit.statusPr }}</td>
+  <td class="action-cell">
+    <button [routerLink]="'/admin/updateProduct/' + produit.idPr" class="btn btn-primary btn-sm">
+      <i class="fa fa-edit"></i>
+    </button>
+    <button (click)="archiverProduct(produit.idPr)" class="btn btn-danger btn-sm">
+      <i class="fa fa-trash"></i>
+    </button>
+  </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+</div>

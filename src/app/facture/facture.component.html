@@ -1,0 +1,31 @@
+<div class="invoice">
+    <div class="header">
+        <h1>Vitanova</h1>
+        <p>Date: {{ invoiceData?.date }}</p>
+    </div>
+    
+    <div class="products">
+        <table>
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Prix</th>
+                    <th>Quantité</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of invoiceData?.products">
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price }}€</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>{{ product.price * product.quantity }}€</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="total">
+        <p>Prix total: {{ invoiceData?.totalPrice }}€</p>
+    </div>
+</div>

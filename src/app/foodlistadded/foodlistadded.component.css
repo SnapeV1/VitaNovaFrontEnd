@@ -1,0 +1,212 @@
+
+.food-actions {
+  display: flex;
+  align-items: center;
+}
+
+.food-actions button {
+  margin-left: 5px;
+}
+.contentFood {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px; /* Adjust as needed to create space below the fixed navbar and button */
+  width: 100%;
+}
+
+.svg-icon,
+.svg-icon1 {
+  width: 20px; /* Ajuster la taille des icônes */
+  height: 20px; /* Ajuster la taille des icônes */
+  fill: currentColor; /* Utiliser la couleur actuelle pour les icônes */
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #57B922;
+}
+
+.svg-icon circle {
+  stroke: #57B922;
+  stroke-width: 1;
+}
+
+.svg-icon1 path,
+.svg-icon1 polygon,
+.svg-icon1 rect {
+  fill: #DD0B0B;
+}
+
+.svg-icon1 circle {
+  stroke: #DD0B0B;
+  stroke-width: 1;
+}
+.btnfoodaction{
+  background-color: transparent;
+  border:0;
+  padding: 5px; /* Adjust the padding to make the buttons smaller */
+
+}
+.btndeletefood{
+  background-color: transparent;
+  border:0;
+  padding: 5px; /* Adjust the padding to make the buttons smaller */
+
+}
+.food-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.food-table th, .food-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.food-table th:last-child, .food-table td:last-child {
+  text-align: center;
+  text-decoration-color: antiquewhite;
+}
+
+.food-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  height: 3em;
+  width: 7em;
+  margin: auto;
+  margin-right: 60px;
+  position: relative;
+  padding:10px;
+  background: #277105;
+  font-size: 17px;
+  font-weight: 550;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #277105;
+  border-radius: 15px;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  margin-top: 25px;
+}
+
+button:hover {
+  border: 1px solid #277105;
+  background: linear-gradient(
+          85deg,
+          #277105,
+          #278707,
+          #4a9f19,
+          #076404,
+          #72b605
+  );
+  animation: wind 2s ease-in-out infinite;
+}
+
+@keyframes wind {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  0% {
+    background-position: 50% 100%;
+  }
+
+  0% {
+    background-position: 0% 50%;
+  }
+}
+
+.icon-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  transform-origin: 0 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+}
+
+button:hover .icon-1 {
+  animation: slay-1 3s cubic-bezier(0.52, 0, 0.58, 1) infinite;
+  transform: rotate(10deg);
+}
+
+@keyframes slay-1 {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.icon-2 {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 12px;
+  transform-origin: 50% 0;
+  transform: rotate(10deg);
+  transition: all 1s ease-in-out;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+button:hover .icon-2 {
+  animation: slay-2 3s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  transform: rotate(0);
+}
+
+@keyframes slay-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.icon-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  transform-origin: 50% 0;
+  transform: rotate(-5deg);
+  transition: all 1s ease-in-out;
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+}
+
+button:hover .icon-3 {
+  animation: slay-3 2s cubic-bezier(0.52, 0, 0.58, 1) 1s infinite;
+  transform: rotate(0);
+}
+
+@keyframes slay-3 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}

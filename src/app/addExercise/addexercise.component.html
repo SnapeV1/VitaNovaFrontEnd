@@ -1,0 +1,50 @@
+<div class="container">
+  <!-- Center the card horizontally -->
+
+    <div class="card" style="max-width: 500px;">
+      <div class="card-header bg-primary text-white">
+        Exercise Form
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" [formGroup]="exerciseForm" enctype="multipart/form-data">
+
+          <div class="form-group">
+            <input type="text" id="title" formControlName="title" class="form-control border-input" placeholder="Enter title">
+          </div>
+          <div class="form-group">
+            <textarea id="description" formControlName="description" class="form-control border-input" placeholder="Enter description"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" id="typeEx" formControlName="typeEx" class="form-control border-input" placeholder="Enter exercise type">
+          </div>
+          <div class="form-group">
+            <input type="text" id="bodypart" formControlName="bodypart" class="form-control border-input" placeholder="Enter body part">
+          </div>
+          <div class="form-group">
+            <select id="intensity" formControlName="intensity" class="form-control border-input bg-transparent" placeholder="intensity">
+              <option *ngFor="let int of intensity" [value]="int">{{ int }}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" id="sets" formControlName="sets" class="form-control border-input" placeholder="Enter number of sets">
+          </div>
+          <div class="form-group">
+            <input type="text" id="reps" formControlName="reps" class="form-control border-input" placeholder="Enter number of reps">
+          </div>
+          <div class="form-group">
+            <div class="custom-file">
+              <input type="file" id="picture" (change)=" onFileChanged($event)" class="custom-file-input">
+              <label class="custom-file-label" for="picture">Choose an image</label>
+            </div>
+            <img *ngIf="selectedFile" [src]="getSelectedFileUrl()" alt="Selected Image" class="img-fluid mt-3">
+            <small *ngIf="!selectedFile && exerciseForm.get('picture')?.invalid && exerciseForm.get('picture')?.touched" class="text-danger">Please choose an image file.</small>
+          </div>
+
+          <div class="form-group text-center"> <!-- Added text-center class -->
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
