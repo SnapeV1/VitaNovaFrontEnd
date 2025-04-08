@@ -32,8 +32,8 @@ VitaNova is an AI-driven e-Commerce platform designed to enhance user lifestyle 
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/vitanova.git
-   cd vitanova-backend
+   git clone https://github.com/SnapeV1/VitaNovaBackEnd.git
+   cd VitaNovaBackEnd
    ```
 
 2. **Configure MySQL & Environment Variables**  
@@ -59,7 +59,7 @@ VitaNova is an AI-driven e-Commerce platform designed to enhance user lifestyle 
 
 1. **Navigate to the frontend folder**  
    ```bash
-   cd vitanova-frontend
+   cd VitaNovaFrontEnd
    ```
 
 2. **Install dependencies**  
